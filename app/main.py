@@ -1,13 +1,11 @@
 from fastapi import FastAPI
+
 import logging
 from time import perf_counter
 
+# Подключение routers
 from routers.data_work.data_importer import router_data_import
 
-# Подключение routers
-#
-#
-#
 
 # Создание приложения FastAPI
 app = FastAPI()
