@@ -6,6 +6,7 @@ from time import perf_counter
 # Импорт routers
 from routers.data_work.data_import import router_data_import
 from routers.data_work.data_change_influencing_param import router_data_change_influencing_param
+from routers.data_work.data_delete_nan import router_data_delete_nan
 
 
 # Создание приложения FastAPI
@@ -38,6 +39,10 @@ def main():
     logger.info("Идёт подключение роутера для изменения влияющего параметра")
     app.include_router(router_data_change_influencing_param)
     logger.info("Роутер для изменения влияющего параметра в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для работы с NaN значениями")
+    app.include_router(router_data_delete_nan)
+    logger.info("Роутер для работы с NaN значениями в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

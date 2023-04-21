@@ -1,0 +1,81 @@
+2023-04-21 15:31:05,116|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 23
+2023-04-21 15:31:05,127|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:31:05,131|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 23 Затрачено времени: 0.003867300009005703
+2023-04-21 15:31:29,412|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 23
+2023-04-21 15:31:29,418|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:31:29,419|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 23 Затрачено времени: 0.001225300002261065
+2023-04-21 15:31:45,657|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:31:45,658|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:31:45,659|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: zero Всего осталось NaN значений: 0Затрачено времени: 0.0005815000040456653
+2023-04-21 15:32:20,213|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:32:20,214|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:32:20,228|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'mean' Всего осталось NaN значений: 0 Затрачено времени: 0.012437400000635535
+2023-04-21 15:32:33,229|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:32:33,230|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:32:33,235|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'median' Всего осталось NaN значений: 0 Затрачено времени: 0.003893400004017167
+2023-04-21 15:32:49,600|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:32:49,602|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:32:49,602|CRITICAL|app.scripts.data_work.data_delete_nan|В результате замены NaN строчек на значения произошла ошибка!
+2023-04-21 15:32:49,602|ERROR|app.scripts.data_work.data_delete_nan|Rolling.mean() got an unexpected keyword argument 'axis'
+2023-04-21 15:33:24,726|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:33:24,727|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:33:24,736|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'rolling mean' Всего осталось NaN значений: 2 Затрачено времени: 0.0085384999983944
+2023-04-21 15:33:40,377|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 2
+2023-04-21 15:33:40,378|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901         0
+07LAB50CF001         0
+07LAB50CP002         0
+07LBA10CF001         0
+07HHG00CF001_CORR    2
+dtype: int64
+2023-04-21 15:33:40,380|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'mean' Всего осталось NaN значений: 0 Затрачено времени: 0.0018339999951422215
+2023-04-21 15:34:06,335|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 15:34:06,337|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+dtype: int64
+2023-04-21 15:34:06,341|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'rolling median' Всего осталось NaN значений: 2 Затрачено времени: 0.0038994999922579154
+2023-04-21 15:34:32,888|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 2
+2023-04-21 15:34:32,889|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901         0
+07LAB50CF001         0
+07LAB50CP002         0
+07LBA10CF001         0
+07HHG00CF001_CORR    2
+dtype: int64
+2023-04-21 15:34:32,890|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 2 Затрачено времени: 0.0014445999986492097

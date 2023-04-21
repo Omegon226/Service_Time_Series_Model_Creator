@@ -18,7 +18,7 @@ async def set_data_from_csv_(request: SetDataInfluencingParamRequest):
     return {"result": "Запрос был выполнен успешно!"}
 
 
-@router_data_change_influencing_param.get("/test_check_time_series_worf_df/")
+@router_data_change_influencing_param.get("/test_check_time_series_work_df/")
 async def test_check_time_series_worf_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),

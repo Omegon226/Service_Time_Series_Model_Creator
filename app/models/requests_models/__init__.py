@@ -1,3 +1,5 @@
+import app.models.requests_models.set_data_delete_nan
+import app.models.requests_models.set_data_change_nan
 import app.models.requests_models.set_data_from_csv
 import app.models.requests_models.set_data_from_dict
 import app.models.requests_models.set_data_from_json
