@@ -1,3 +1,6 @@
 2023-04-21 14:08:06,857|INFO|app.scripts.data_work.data_change_influencing_param|Установка параметра: 07HAH10CP901, как влияющего для временных рядов
 2023-04-21 14:08:19,320|INFO|app.scripts.data_work.data_change_influencing_param|Установка параметра: 07HAH10asdasdaCP901, как влияющего для временных рядов
 2023-04-21 14:08:19,320|CRITICAL|app.scripts.data_work.data_change_influencing_param|В данных о временных рядах нету такого параметра: 07HAH10asdasdaCP901
+2023-04-21 16:35:34,900|INFO|app.scripts.data_work.data_change_influencing_param|Установка параметра: 07HAH10CP901, как влияющего для временных рядов
+2023-04-21 16:36:51,907|INFO|app.scripts.data_work.data_change_influencing_param|Установка параметра: 07HAH10CP901, как влияющего для временных рядов
+2023-04-21 16:39:31,027|INFO|app.scripts.data_work.data_change_influencing_param|Установка параметра: 07HAH10CP901, как влияющего для временных рядов

@@ -10,7 +10,7 @@ router_data_change_influencing_param = APIRouter(prefix="/data_change_influencin
 
 
 @router_data_change_influencing_param.post("/set_param/")
-async def set_data_from_csv_(request: SetDataInfluencingParamRequest):
+async def set_param(request: SetDataInfluencingParamRequest):
     result = SetterOfInfluencingParameter.set_influencing_parameter(app.service_global_variables.data.time_series_work,
                                                                     parameter_to_set_influencing=request.parameter_to_set_influencing)
 
@@ -19,7 +19,7 @@ async def set_data_from_csv_(request: SetDataInfluencingParamRequest):
 
 
 @router_data_change_influencing_param.get("/test_check_time_series_work_df/")
-async def test_check_time_series_worf_df():
+async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),
             "result_influencing_param": app.service_global_variables.data.time_series_work.influencing_parameter}

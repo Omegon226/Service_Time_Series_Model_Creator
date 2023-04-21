@@ -10,8 +10,8 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 router_data_delete_nan = APIRouter(prefix="/data_delete_nan")
 
 
-@router_data_delete_nan.post("/del_nan/")
-async def set_data_from_csv(request: SetDataDeleteNan):
+@router_data_delete_nan.post("/delete_nan/")
+async def delete_nan(request: SetDataDeleteNan):
     result = DeleterOfNanValues.delete_nan_values(app.service_global_variables.data.time_series_work)
 
     app.service_global_variables.data.time_series_work = result
@@ -20,7 +20,7 @@ async def set_data_from_csv(request: SetDataDeleteNan):
 
 
 @router_data_delete_nan.post("/change_nan/")
-async def set_data_from_csv(request: SetDataChangeNan):
+async def change_nan(request: SetDataChangeNan):
     result = DeleterOfNanValues.change_nan_values(app.service_global_variables.data.time_series_work,
                                                   type_of_editing=request.type_of_editing,
                                                   window_size=request.window_size)
@@ -31,7 +31,7 @@ async def set_data_from_csv(request: SetDataChangeNan):
 
 
 @router_data_delete_nan.get("/test_check_time_series_work_df/")
-async def test_check_time_series_worf_df():
+async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),
             "result_influencing_param": app.service_global_variables.data.time_series_work.influencing_parameter,

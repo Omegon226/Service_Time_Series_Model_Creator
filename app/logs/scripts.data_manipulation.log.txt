@@ -1,0 +1,43 @@
+2023-04-21 16:33:52,009|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-04-21 16:33:52,032|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.022906800004420802
+2023-04-21 16:33:52,033|DEBUG|app.scripts.data_work.data_manipulation|description: {'07HAH10CP901': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, '07LAB50CF001': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, '07LAB50CP002': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, '07LBA10CF001': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, '07HHG00CF001_CORR': {'count': 277.0, 'mean': 55612.76676173285, 'std': 197.15974875745434, 'min': 54686.992, '25%': 55491.848, '50%': 55641.219, '75%': 55743.578, 'max': 56183.117}}
+2023-04-21 16:34:17,601|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-04-21 16:34:17,610|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.009112700005061924
+2023-04-21 16:34:17,611|DEBUG|app.scripts.data_work.data_manipulation|description: {'07HAH10CP901': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, '07LAB50CF001': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, '07LAB50CP002': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, '07LBA10CF001': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, '07HHG00CF001_CORR': {'count': 277.0, 'mean': 55612.76676173285, 'std': 197.15974875745434, 'min': 54686.992, '25%': 55491.848, '50%': 55641.219, '75%': 55743.578, 'max': 56183.117}}
+2023-04-21 16:34:42,764|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов 07LAB50CF001 из данных о временных рядах
+2023-04-21 16:34:42,764|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:34:42,764|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not NoneType
+2023-04-21 16:35:09,907|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07LAB50CF001'] из данных о временных рядах
+2023-04-21 16:35:09,911|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['07LAB50CF001']Затрачено времени: 0.0031519000040134415
+2023-04-21 16:35:45,444|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP901'] из данных о временных рядах
+2023-04-21 16:35:45,445|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['07HAH10CP901']Затрачено времени: 0.0005921000119997188
+2023-04-21 16:36:06,571|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP901'] из данных о временных рядах
+2023-04-21 16:36:06,571|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:36:06,571|ERROR|app.scripts.data_work.data_manipulation|"['07HAH10CP901'] not found in axis"
+2023-04-21 16:36:56,519|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP901'] из данных о временных рядах
+2023-04-21 16:36:56,520|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['07HAH10CP901'] Затрачено времени: 0.0009430999925825745
+2023-04-21 16:37:14,392|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-04-21 16:37:14,402|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.00968079999438487
+2023-04-21 16:37:14,402|DEBUG|app.scripts.data_work.data_manipulation|description: {'07LAB50CF001': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, '07LAB50CP002': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, '07LBA10CF001': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, '07HHG00CF001_CORR': {'count': 277.0, 'mean': 55612.76676173285, 'std': 197.15974875745434, 'min': 54686.992, '25%': 55491.848, '50%': 55641.219, '75%': 55743.578, 'max': 56183.117}}
+2023-04-21 16:37:19,505|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов 07LAB50CP002 из данных о временных рядах
+2023-04-21 16:37:19,506|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:37:19,506|ERROR|app.scripts.data_work.data_manipulation|"['0', '7', 'L', 'A', 'B', '5', '0', 'C', 'P', '0', '0', '2'] not found in axis"
+2023-04-21 16:38:35,828|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов 07LAB50CP002 из данных о временных рядах
+2023-04-21 16:38:35,828|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:38:35,828|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not NoneType
+2023-04-21 16:38:55,999|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов 07LAB50CP002 из данных о временных рядах
+2023-04-21 16:38:56,000|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:38:56,000|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not NoneType
+2023-04-21 16:39:01,462|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов 07LAB50CP002 из данных о временных рядах
+2023-04-21 16:39:01,462|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:39:01,462|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not NoneType
+2023-04-21 16:39:48,228|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP901'] из данных о временных рядах
+2023-04-21 16:39:48,228|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:39:48,230|ERROR|app.scripts.data_work.data_manipulation|Влияющий параметр не может быть удалён. Если он вам не нужен, то замените его
+2023-04-21 16:39:57,242|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP01'] из данных о временных рядах
+2023-04-21 16:39:57,243|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-04-21 16:39:57,243|ERROR|app.scripts.data_work.data_manipulation|"['07HAH10CP01'] not found in axis"
+2023-04-21 16:41:01,599|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07HAH10CP901'] из данных о временных рядах
+2023-04-21 16:41:01,600|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['07HAH10CP901'] Затрачено времени: 0.0009683999960543588
+2023-04-21 16:41:15,324|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['07LBA10CF001'] из данных о временных рядах
+2023-04-21 16:41:15,325|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['07LBA10CF001'] Затрачено времени: 0.0006465999904321507
