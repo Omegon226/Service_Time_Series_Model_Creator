@@ -8,7 +8,7 @@ from routers.data_work.data_import import router_data_import
 from routers.data_work.data_change_influencing_param import router_data_change_influencing_param
 from routers.data_work.data_delete_nan import router_data_delete_nan
 from routers.data_work.data_manipulation import router_data_manipulation
-
+from routers.data_work.data_create_param import router_data_create_param
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -48,6 +48,10 @@ def main():
     logger.info("Идёт подключение роутера для манипуляции над данными")
     app.include_router(router_data_manipulation)
     logger.info("Роутер для манипуляции над данными в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания нового параметра")
+    app.include_router(router_data_create_param)
+    logger.info("Роутер для создания нового параметра в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

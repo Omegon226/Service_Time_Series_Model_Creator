@@ -50,6 +50,11 @@ class DataManipulator:
 
             timer_start: float = perf_counter()
             time_series_df.df_work = time_series_df.df_work.drop(columns=columns_to_drop)
+            if type(columns_to_drop) is str:
+                time_series_df.data_params.remove(columns_to_drop)
+            elif type(columns_to_drop) is list:
+                for i in columns_to_drop:
+                    time_series_df.data_params.remove(i)
             timer_end: float = perf_counter()
 
             logger.info(f"В результате работы были успешно удалена/ы колонка/и {columns_to_drop} "

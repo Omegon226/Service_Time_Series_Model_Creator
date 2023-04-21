@@ -79,3 +79,13 @@ dtype: int64
 07HHG00CF001_CORR    2
 dtype: int64
 2023-04-21 15:34:32,890|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 2 Затрачено времени: 0.0014445999986492097
+2023-04-21 18:04:38,838|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 23
+2023-04-21 18:04:38,840|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: 07HAH10CP901          0
+07LAB50CF001          0
+07LAB50CP002          0
+07LBA10CF001          0
+07HHG00CF001_CORR    23
+Mean                  0
+STD                   0
+dtype: int64
+2023-04-21 18:04:38,843|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'mean' Всего осталось NaN значений: 0 Затрачено времени: 0.002848799995263107

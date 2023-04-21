@@ -4,3 +4,5 @@
 2023-04-21 16:35:34,900|INFO|app.scripts.data_work.data_change_influencing_param|”становка параметра: 07HAH10CP901, как вли€ющего дл€ временных р€дов
 2023-04-21 16:36:51,907|INFO|app.scripts.data_work.data_change_influencing_param|”становка параметра: 07HAH10CP901, как вли€ющего дл€ временных р€дов
 2023-04-21 16:39:31,027|INFO|app.scripts.data_work.data_change_influencing_param|”становка параметра: 07HAH10CP901, как вли€ющего дл€ временных р€дов
+2023-04-21 18:09:36,393|INFO|app.scripts.data_work.data_change_influencing_param|”становка параметра: 07HAH10CP901, как вли€ющего дл€ временных р€дов
+2023-04-21 18:10:25,732|INFO|app.scripts.data_work.data_change_influencing_param|”становка параметра: 07HAH10CP901, как вли€ющего дл€ временных р€дов
