@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(10)
 logg_formatter = logging.Formatter(fmt=f"%(asctime)s|%(levelname)s|{logger.name}|%(message)s")
 # Добавляем ротируемый вывод логгера в файл
-file_handler = logging.FileHandler("app/logs/scripts.data_importer.log.txt", mode="a+")
+file_handler = logging.FileHandler("app/logs/scripts.data_import.log.txt", mode="a+")
 file_handler.setFormatter(logg_formatter)
 logger.addHandler(file_handler)
 # Добавляем вывод логгера в консоль
