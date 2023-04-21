@@ -1,0 +1,7 @@
+import app.routers.visualization.visualise_boxpot_of_data
+import app.routers.visualization.visualise_corr_of_data
+import app.routers.visualization.visualise_hist_of_data
+import app.routers.visualization.visualise_plot_data
+import app.routers.visualization.visualise_violinplot_data
+import app.routers.visualization.visualize_rolling_avarege_of_data
+import app.routers.visualization.visualize_rolling_statistics_of_data
