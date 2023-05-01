@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
 import logging
 from time import perf_counter
@@ -9,6 +10,11 @@ from routers.data_work.data_change_influencing_param import router_data_change_i
 from routers.data_work.data_delete_nan import router_data_delete_nan
 from routers.data_work.data_manipulation import router_data_manipulation
 from routers.data_work.data_create_param import router_data_create_param
+from routers.visualization.visualise_plot_of_data import router_visualise_plot_of_data
+from routers.visualization.visualise_violinplot_of_data import router_visualise_violinplot_of_data
+from routers.visualization.visualise_hist_of_data import router_visualise_hist_of_data
+from routers.visualization.visualise_boxplot_of_data import router_visualise_boxplot_of_data
+from routers.visualization.visualise_corrheatmap_of_data import router_visualise_corrheatmap_of_data
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -53,7 +59,32 @@ def main():
     app.include_router(router_data_create_param)
     logger.info("Роутер для создания нового параметра в сервис успешно подключён!")
 
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (plot)")
+    app.include_router(router_visualise_plot_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (plot) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (violinplot)")
+    app.include_router(router_visualise_violinplot_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (violinplot) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (hist)")
+    app.include_router(router_visualise_hist_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (hist) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (boxplot)")
+    app.include_router(router_visualise_boxplot_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (boxplot) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (corrheatmap)")
+    app.include_router(router_visualise_corrheatmap_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (corrheatmap) в сервис успешно подключён!")
+
     logger.info("Все роутеры были успешно подключены!")
+
+
+@app.get("/")
+def redirect_to_swagger_docs():
+    return RedirectResponse("/docs")
 
 
 if __name__ == "__main__":

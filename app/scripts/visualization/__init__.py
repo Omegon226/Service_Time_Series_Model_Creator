@@ -1,7 +1,7 @@
-import app.scripts.visualization.visualise_boxpot_of_data
-import app.scripts.visualization.visualise_corr_of_data
+import app.scripts.visualization.visualise_boxplot_of_data
+import app.scripts.visualization.visualise_corrheatmap_of_data
 import app.scripts.visualization.visualise_hist_of_data
-import app.scripts.visualization.visualise_plot_data
-import app.scripts.visualization.visualise_violinplot_data
+import app.scripts.visualization.visualise_plot_of_data
+import app.scripts.visualization.visualise_violinplot_of_data
 import app.scripts.visualization.visualize_rolling_avarege_of_data
 import app.scripts.visualization.visualize_rolling_statistics_of_data

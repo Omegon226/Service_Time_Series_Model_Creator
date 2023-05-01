@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(10)
 logg_formatter = logging.Formatter(fmt=f"%(asctime)s|%(levelname)s|{logger.name}|%(message)s")
 # Добавляем ротируемый вывод логгера в файл
-file_handler = logging.FileHandler("app/logs/scripts.visualise_hist_of_data.log.txt", mode="a+")
+file_handler = logging.FileHandler("app/logs/scripts.visualise_plot_of_data.log.txt", mode="a+")
 file_handler.setFormatter(logg_formatter)
 logger.addHandler(file_handler)
 # Добавляем вывод логгера в консоль
@@ -25,36 +25,36 @@ console_handler.setFormatter(logg_formatter)
 logger.addHandler(console_handler)
 
 
-class VisualiserHistOfData:
+class VisualiserPlotOfData:
     @staticmethod
-    def create_hist_test_img():
-        logger.info(f"Происходит создание тестовой визуализации (hist)")
+    def create_plot_test_img():
+        logger.info(f"Происходит создание тестовой визуализации (plot)")
         try:
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
-            sns.histplot(data=[1, 2, 3, 6, 9, 12])
+            sns.lineplot(data=[1, 2, 3, 6, 9, 12])
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании тестовой  (hist) визуализации произошла ошибка"
+            error_message: str = f"Входе создании тестовой  (plot) визуализации произошла ошибка"
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_hist_img(time_series_df: TimeSeriesDF):
-        logger.info(f"Происходит создание визуализации всех временных рядов (hist)")
+    def create_plot_img(time_series_df: TimeSeriesDF):
+        logger.info(f"Происходит создание визуализации всех временных рядов (plot)")
         try:
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
-            sns.histplot(data=time_series_df.df_work)
+            sns.lineplot(data=time_series_df.df_work)
             plt.title("Визуализация временных рядов")
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании визуализации (hist) произошла ошибка"
+            error_message: str = f"Входе создании визуализации  (plot) произошла ошибка"
             http_error(error_message, error, logger=logger)

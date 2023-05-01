@@ -476,4 +476,4 @@ def set_df_nan():
  }))
 
 
-set_df_nan()
+set_df()
