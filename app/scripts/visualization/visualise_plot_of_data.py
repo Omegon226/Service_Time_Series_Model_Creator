@@ -39,7 +39,7 @@ class VisualiserPlotOfData:
             plt.close(fig)
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании тестовой  (plot) визуализации произошла ошибка"
+            error_message: str = f"Входе создании тестовой (plot) визуализации произошла ошибка"
             http_error(error_message, error, logger=logger)
 
     @staticmethod
@@ -56,5 +56,5 @@ class VisualiserPlotOfData:
             plt.close(fig)
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании визуализации  (plot) произошла ошибка"
+            error_message: str = f"Входе создании визуализации (plot) произошла ошибка"
             http_error(error_message, error, logger=logger)

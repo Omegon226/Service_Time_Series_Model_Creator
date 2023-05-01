@@ -39,7 +39,7 @@ class VisualiserViolinplotOfData:
             plt.close(fig)
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании тестовой  (violinplot) визуализации произошла ошибка"
+            error_message: str = f"Входе создании тестовой (violinplot) визуализации произошла ошибка"
             http_error(error_message, error, logger=logger)
 
     @staticmethod

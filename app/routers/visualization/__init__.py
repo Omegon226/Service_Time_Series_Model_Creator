@@ -3,5 +3,5 @@ import app.routers.visualization.visualise_corrheatmap_of_data
 import app.routers.visualization.visualise_hist_of_data
 import app.routers.visualization.visualise_plot_of_data
 import app.routers.visualization.visualise_violinplot_of_data
-import app.routers.visualization.visualize_rolling_avarege_of_data
+import app.routers.visualization.visualize_rolling_average_of_data
 import app.routers.visualization.visualize_rolling_statistics_of_data

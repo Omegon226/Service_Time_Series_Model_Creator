@@ -27,7 +27,7 @@ class SetterOfInfluencingParameter:
         logger.info(f"Установка параметра: {parameter_to_set_influencing}, как влияющего для временных рядов")
         params_of_df = list(time_series_df.df_work.columns)
         if parameter_to_set_influencing in params_of_df:
-            time_series_df.influencing_parameter = [parameter_to_set_influencing]
+            time_series_df.main_parameter = [parameter_to_set_influencing]
             return time_series_df
         else:
             error_message: str = f"В данных о временных рядах нету такого параметра: {parameter_to_set_influencing}"

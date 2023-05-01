@@ -15,6 +15,8 @@ from routers.visualization.visualise_violinplot_of_data import router_visualise_
 from routers.visualization.visualise_hist_of_data import router_visualise_hist_of_data
 from routers.visualization.visualise_boxplot_of_data import router_visualise_boxplot_of_data
 from routers.visualization.visualise_corrheatmap_of_data import router_visualise_corrheatmap_of_data
+from routers.visualization.visualize_rolling_statistics_of_data import router_visualise_rolling_statistics_of_data
+from routers.visualization.visualize_rolling_average_of_data import router_visualise_rolling_average_of_data
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -78,6 +80,14 @@ def main():
     logger.info("Идёт подключение роутера для создания визуализации временных рядов (corrheatmap)")
     app.include_router(router_visualise_corrheatmap_of_data)
     logger.info("Роутер для создания визуализации временных рядов (corrheatmap) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (rolling_statistics)")
+    app.include_router(router_visualise_rolling_statistics_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (rolling_statistics) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания визуализации временных рядов (rolling_average)")
+    app.include_router(router_visualise_rolling_average_of_data)
+    logger.info("Роутер для создания визуализации временных рядов (rolling_average) в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

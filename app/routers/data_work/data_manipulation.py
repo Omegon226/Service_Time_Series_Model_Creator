@@ -30,4 +30,4 @@ async def drop_columns(request: SetDataDropColumns):
 async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),
-            "result_influencing_param": app.service_global_variables.data.time_series_work.influencing_parameter}
+            "result_influencing_param": app.service_global_variables.data.time_series_work.main_parameter}

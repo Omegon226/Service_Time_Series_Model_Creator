@@ -41,7 +41,7 @@ class DeleterOfNanValues:
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def change_nan_values(time_series_df: TimeSeriesDF, type_of_editing: str, window_size: int | None = None):
+    def change_nan_values(time_series_df: TimeSeriesDF, type_of_editing: str, window_size: int):
         logger.info(f"Замена строчек с NaN значениями на статистические значения. "
                     f"Всего таких строчек: {time_series_df.df_work.isna().sum().sum()}")
         logger.debug(f"Сумма NaN значений по столбцам: {time_series_df.df_work.isna().sum()}")
@@ -57,14 +57,14 @@ class DeleterOfNanValues:
             elif type_of_editing == "rolling mean":
                 if window_size is not None:
                     time_series_df.df_work = time_series_df.df_work.fillna(
-                        time_series_df.df_work.rolling(window=2, min_periods=1).mean())
+                        time_series_df.df_work.rolling(window=window_size, min_periods=1).mean())
                 else:
                     error_message = "Не было указан размер окна для обработки NaN значений"
                     raise Exception(error_message)
             elif type_of_editing == "rolling median":
                 if window_size is not None:
                     time_series_df.df_work = time_series_df.df_work.fillna(
-                        time_series_df.df_work.rolling(window=2, min_periods=1).median())
+                        time_series_df.df_work.rolling(window=window_size, min_periods=1).median())
                 else:
                     error_message = "Не было указан размер окна для обработки NaN значений"
                     raise Exception(error_message)

@@ -44,8 +44,8 @@ class DataManipulator:
         logger.info(f"Удаление ненужного/ых параметра/ов {columns_to_drop} из данных о временных рядах")
 
         try:
-            if time_series_df.influencing_parameter in columns_to_drop or \
-                    time_series_df.influencing_parameter == columns_to_drop:
+            if time_series_df.main_parameter in columns_to_drop or \
+                    time_series_df.main_parameter == columns_to_drop:
                 raise Exception("Влияющий параметр не может быть удалён. Если он вам не нужен, то замените его")
 
             timer_start: float = perf_counter()

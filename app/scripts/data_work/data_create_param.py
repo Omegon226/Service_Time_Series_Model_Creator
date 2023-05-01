@@ -23,7 +23,7 @@ logger.addHandler(console_handler)
 
 class DataCreatorParam:
     @staticmethod
-    def add_new_column(time_series_df: TimeSeriesDF, type_of_param: str, window_size: int | None = None):
+    def add_new_column(time_series_df: TimeSeriesDF, type_of_param: str, window_size: int):
         logger.info(f"Создание нового параметра для существующих данных")
 
         try:
@@ -40,45 +40,45 @@ class DataCreatorParam:
                 if window_size is None:
                     error_message = "Не было указан размер окна для добавления новых данных"
                     raise Exception(error_message)
-                if time_series_df.influencing_parameter is None:
+                if time_series_df.main_parameter is None:
                     error_message = "Для создания такого параметра нужно знать влияющий параметр"
                     raise Exception(error_message)
 
-                time_series_df.df_work[f"Rolling Mean {time_series_df.influencing_parameter}"] = \
-                    time_series_df.df_work[time_series_df.influencing_parameter].rolling(
+                time_series_df.df_work[f"Rolling Mean {time_series_df.main_parameter}"] = \
+                    time_series_df.df_work[time_series_df.main_parameter].rolling(
                         window=window_size).mean()
             elif type_of_param == "rolling median":
                 if window_size is None:
                     error_message = "Не было указан размер окна для добавления новых данных"
                     raise Exception(error_message)
-                if time_series_df.influencing_parameter is None:
+                if time_series_df.main_parameter is None:
                     error_message = "Для создания такого параметра нужно знать влияющий параметр"
                     raise Exception(error_message)
 
-                time_series_df.df_work[f"Rolling Median {time_series_df.influencing_parameter}"] = \
-                    time_series_df.df_work[time_series_df.influencing_parameter].rolling(
+                time_series_df.df_work[f"Rolling Median {time_series_df.main_parameter}"] = \
+                    time_series_df.df_work[time_series_df.main_parameter].rolling(
                         window=window_size).median()
             elif type_of_param == "rolling range":
                 if window_size is None:
                     error_message = "Не было указан размер окна для добавления новых данных"
                     raise Exception(error_message)
-                if time_series_df.influencing_parameter is None:
+                if time_series_df.main_parameter is None:
                     error_message = "Для создания такого параметра нужно знать влияющий параметр"
                     raise Exception(error_message)
 
-                time_series_df.df_work[f"Rolling Range {time_series_df.influencing_parameter}"] = \
-                    time_series_df.df_work[time_series_df.influencing_parameter].rolling(window=window_size).max() - \
-                    time_series_df.df_work[time_series_df.influencing_parameter].rolling(window=window_size).min()
+                time_series_df.df_work[f"Rolling Range {time_series_df.main_parameter}"] = \
+                    time_series_df.df_work[time_series_df.main_parameter].rolling(window=window_size).max() - \
+                    time_series_df.df_work[time_series_df.main_parameter].rolling(window=window_size).min()
             elif type_of_param == "rolling std":
                 if window_size is None:
                     error_message = "Не было указан размер окна для добавления новых данных"
                     raise Exception(error_message)
-                if time_series_df.influencing_parameter is None:
+                if time_series_df.main_parameter is None:
                     error_message = "Для создания такого параметра нужно знать влияющий параметр"
                     raise Exception(error_message)
 
-                time_series_df.df_work[f"Rolling STD {time_series_df.influencing_parameter}"] = \
-                    time_series_df.df_work[time_series_df.influencing_parameter].rolling(
+                time_series_df.df_work[f"Rolling STD {time_series_df.main_parameter}"] = \
+                    time_series_df.df_work[time_series_df.main_parameter].rolling(
                         window=window_size).std()
             else:
                 error_message = f"Переданный тип параметра ({type_of_param}) для создания нового параметра не существует"
