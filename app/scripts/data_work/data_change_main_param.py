@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(10)
 logg_formatter = logging.Formatter(fmt=f"%(asctime)s|%(levelname)s|{logger.name}|%(message)s")
 # Добавляем ротируемый вывод логгера в файл
-file_handler = logging.FileHandler("app/logs/scripts.data_change_influencing_param.log.txt", mode="a+")
+file_handler = logging.FileHandler("app/logs/scripts.data_change_main_param.log.txt", mode="a+")
 file_handler.setFormatter(logg_formatter)
 logger.addHandler(file_handler)
 # Добавляем вывод логгера в консоль
@@ -21,14 +21,14 @@ console_handler.setFormatter(logg_formatter)
 logger.addHandler(console_handler)
 
 
-class SetterOfInfluencingParameter:
+class SetterOfMainParameter:
     @staticmethod
-    def set_influencing_parameter(time_series_df: TimeSeriesDF, parameter_to_set_influencing: str):
-        logger.info(f"Установка параметра: {parameter_to_set_influencing}, как влияющего для временных рядов")
+    def set_main_parameter(time_series_df: TimeSeriesDF, parameter_to_set_main: str):
+        logger.info(f"Установка параметра: {parameter_to_set_main}, как главного для временных рядов")
         params_of_df = list(time_series_df.df_work.columns)
-        if parameter_to_set_influencing in params_of_df:
-            time_series_df.main_parameter = [parameter_to_set_influencing]
+        if parameter_to_set_main in params_of_df:
+            time_series_df.main_parameter = [parameter_to_set_main]
             return time_series_df
         else:
-            error_message: str = f"В данных о временных рядах нету такого параметра: {parameter_to_set_influencing}"
+            error_message: str = f"В данных о временных рядах нету такого параметра: {parameter_to_set_main}"
             http_error(error_message, logger=logger)

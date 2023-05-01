@@ -6,7 +6,7 @@ from time import perf_counter
 
 # Импорт routers
 from routers.data_work.data_import import router_data_import
-from routers.data_work.data_change_influencing_param import router_data_change_influencing_param
+from routers.data_work.data_change_main_param import router_data_change_main_param
 from routers.data_work.data_delete_nan import router_data_delete_nan
 from routers.data_work.data_manipulation import router_data_manipulation
 from routers.data_work.data_create_param import router_data_create_param
@@ -46,7 +46,7 @@ def main():
     logger.info("Роутер для импорта данных в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для изменения влияющего параметра")
-    app.include_router(router_data_change_influencing_param)
+    app.include_router(router_data_change_main_param)
     logger.info("Роутер для изменения влияющего параметра в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для работы с NaN значениями")
