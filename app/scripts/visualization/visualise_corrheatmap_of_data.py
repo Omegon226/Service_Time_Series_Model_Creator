@@ -46,6 +46,8 @@ class VisualiserCorrheatmapOfData:
     def create_corrheatmap_spearman_img(time_series_df: TimeSeriesDF):
         logger.info(f"Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена")
         try:
+            timer_start: float = perf_counter()
+
             plt.rcParams['figure.figsize'] = [7, 6]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -54,6 +56,11 @@ class VisualiserCorrheatmapOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание визуализации (corrheatmap) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании визуализации (corrheatmap), метод Спирмена произошла ошибка"
@@ -63,6 +70,8 @@ class VisualiserCorrheatmapOfData:
     def create_corrheatmap_pearson_img(time_series_df: TimeSeriesDF):
         logger.info(f"Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона")
         try:
+            timer_start: float = perf_counter()
+
             plt.rcParams['figure.figsize'] = [7, 6]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -71,6 +80,11 @@ class VisualiserCorrheatmapOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание визуализации (corrheatmap) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании визуализации (corrheatmap), метод Пирсона произошла ошибка"

@@ -17,6 +17,8 @@ from routers.visualization.visualise_boxplot_of_data import router_visualise_box
 from routers.visualization.visualise_corrheatmap_of_data import router_visualise_corrheatmap_of_data
 from routers.visualization.visualize_rolling_statistics_of_data import router_visualise_rolling_statistics_of_data
 from routers.visualization.visualize_rolling_average_of_data import router_visualise_rolling_average_of_data
+from routers.scalers_work.test_scalers import router_test_scalers
+from routers.scalers_work.test_column_transformer import router_test_column_transformer
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -88,6 +90,14 @@ def main():
     logger.info("Идёт подключение роутера для создания визуализации временных рядов (rolling_average)")
     app.include_router(router_visualise_rolling_average_of_data)
     logger.info("Роутер для создания визуализации временных рядов (rolling_average) в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для тестирования создания скейлеров")
+    app.include_router(router_test_scalers)
+    logger.info("Роутер для тестирования создания скейлеров в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для тестирования создания колумн трансформера")
+    app.include_router(router_test_column_transformer)
+    logger.info("Роутер для тестирования создания колумн трансформера в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

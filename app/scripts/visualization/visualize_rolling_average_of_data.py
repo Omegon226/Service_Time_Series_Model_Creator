@@ -30,6 +30,8 @@ class VisualiserRollingAverageOfData:
     def create_rolling_average_test_img(window_size: int):
         logger.info(f"Происходит создание тестовой визуализации (rolling_average)")
         try:
+            timer_start: float = perf_counter()
+
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -54,6 +56,11 @@ class VisualiserRollingAverageOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание тестовой визуализации (rolling_average) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании тестовой (rolling_average) визуализации произошла ошибка"
@@ -63,6 +70,12 @@ class VisualiserRollingAverageOfData:
     def create_rolling_average_main_param_img(time_series_df: TimeSeriesDF, window_size: int):
         logger.info(f"Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра")
         try:
+            timer_start: float = perf_counter()
+
+            if time_series_df.main_parameter is None:
+                error_message = "Для создания визуализации движущегося среднего (rolling_average) нужно знать главный параметр"
+                raise Exception(error_message)
+
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -86,6 +99,11 @@ class VisualiserRollingAverageOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание визуализации (rolling_average) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании визуализации (rolling_average) для основного параметра произошла ошибка"

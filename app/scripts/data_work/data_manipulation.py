@@ -64,3 +64,24 @@ class DataManipulator:
         except Exception as error:
             error_message: str = f"В результате удаления параметров произошла ошибка"
             http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def change_data_params(time_series_df: TimeSeriesDF, new_data_params: list):
+        logger.info(f"Установка параметров: {new_data_params}, как данные для создания новых параметров")
+
+        try:
+            if not(time_series_df.main_parameter in new_data_params or
+                    time_series_df.main_parameter == new_data_params):
+                raise Exception("Не хватает какого то параметра в данных")
+
+            timer_start: float = perf_counter()
+            time_series_df.data_params = new_data_params
+            timer_end: float = perf_counter()
+
+            logger.info(f"В результате работы были успешно заменены параметры данных {new_data_params} "
+                        f"Затрачено времени: {timer_end - timer_start}")
+
+            return time_series_df
+        except Exception as error:
+            error_message: str = f"В результате заменены параметров данных произошла ошибка"
+            http_error(error_message, error, logger=logger)

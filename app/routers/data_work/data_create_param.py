@@ -13,6 +13,7 @@ router_data_create_param = APIRouter(prefix="/data_create_param")
 async def create_new_param(request: SetDataCreateNewParam):
     result = DataCreatorParam.add_new_column(app.service_global_variables.data.time_series_work,
                                              type_of_param=request.type_of_param,
+                                             name_of_new_param=request.name_of_new_param,
                                              window_size=request.window_size)
 
     app.service_global_variables.data.time_series_work = result

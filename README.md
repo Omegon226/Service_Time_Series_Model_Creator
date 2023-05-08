@@ -7,3 +7,4 @@
 - MatPlotLib (pip install matplotlib)
 - Seaborn (pip install seaborn)
 - PyMongo (pip install pymongo)
+- Scikit - Learn (pip install scikit-learn)

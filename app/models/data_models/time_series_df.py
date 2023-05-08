@@ -6,3 +6,4 @@ class TimeSeriesDF:
         self.df_work: pd.DataFrame = data
         self.main_parameter: list | None = None
         self.data_params: list = list(self.df_work.columns)
+        self.sequence_of_creating_new_params: list = []

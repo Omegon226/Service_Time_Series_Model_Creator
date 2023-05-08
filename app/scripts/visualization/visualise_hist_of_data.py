@@ -30,6 +30,8 @@ class VisualiserHistOfData:
     def create_hist_test_img():
         logger.info(f"Происходит создание тестовой визуализации (hist)")
         try:
+            timer_start: float = perf_counter()
+
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -37,6 +39,11 @@ class VisualiserHistOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание тестовой визуализации (hist) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании тестовой (hist) визуализации произошла ошибка"
@@ -46,6 +53,8 @@ class VisualiserHistOfData:
     def create_hist_img(time_series_df: TimeSeriesDF):
         logger.info(f"Происходит создание визуализации всех временных рядов (hist)")
         try:
+            timer_start: float = perf_counter()
+
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
@@ -54,6 +63,11 @@ class VisualiserHistOfData:
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
             plt.close(fig)
+
+            timer_end: float = perf_counter()
+            logger.info(f"Создание визуализации (hist) прошло успешно!"
+                        f"Затрачено времени: {timer_end - timer_start}")
+
             return img_buf
         except Exception as error:
             error_message: str = f"Входе создании визуализации (hist) произошла ошибка"

@@ -1,0 +1,10 @@
+2023-05-08 16:30:01,624|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 0.006404400002793409
+2023-05-08 16:30:51,015|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 0.0016967999981716275
+2023-05-08 16:31:14,300|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 2.6801340999954846
+2023-05-08 16:32:33,521|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 3.9309929000010015
+2023-05-08 16:33:42,317|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 2.525799700000789
+2023-05-08 16:33:57,823|INFO|app.scripts.scalers_work.create_scalers|Создание MaxAbsScaler для всех данных прошло успешно! Затрачено времени: 0.0016745000029914081
+2023-05-08 16:34:01,749|INFO|app.scripts.scalers_work.create_scalers|Создание MinMaxScaler для всех данных прошло успешно! Затрачено времени: 0.0014364999951794744
+2023-05-08 16:34:08,317|INFO|app.scripts.scalers_work.create_scalers|Создание StandardScaler для всех данных прошло успешно! Затрачено времени: 0.012595699998200871
+2023-05-08 16:34:17,469|INFO|app.scripts.scalers_work.create_column_transformer|Создание ColumnTransformer для всех данных прошло успешно! Затрачено времени: 4.2000028770416975e-06
+2023-05-08 16:35:50,303|INFO|app.scripts.scalers_work.create_column_transformer|Создание ColumnTransformer и создание новых столбцов для всех данных прошло успешно! Затрачено времени: 0.0015064999897731468
