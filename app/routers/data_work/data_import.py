@@ -8,6 +8,7 @@ from app.scripts.data_work.data_import import Importer
 from app.models.data_models.time_series_df import TimeSeriesDF
 
 router_data_import = APIRouter(prefix="/data_import")
+router_data_import_test = APIRouter(prefix="/test_data_import")
 
 
 @router_data_import.post("/set_data_from_csv/")
@@ -35,7 +36,7 @@ async def set_data_from_json(request: SetDataFromJSONRequest):
     return {"result": "Запрос был выполнен успешно!"}
 
 
-@router_data_import.get("/test_check_time_series_work_df/")
+@router_data_import_test.get("/test_check_time_series_work_df/")
 async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),

@@ -7,6 +7,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_visualise_rolling_average_of_data = APIRouter(prefix="/visualize_rolling_average_of_data")
+router_visualise_rolling_average_of_data_test = APIRouter(prefix="/test_visualize_rolling_average_of_data")
 
 
 @router_visualise_rolling_average_of_data.post("/create_rolling_average_of_selected_data/")
@@ -20,7 +21,7 @@ async def create_rolling_average_of_selected_data(background_tasks: BackgroundTa
     return Response(img.getvalue(), headers=headers, media_type='image/png')
 
 
-@router_visualise_rolling_average_of_data.get("/test_rolling_average/")
+@router_visualise_rolling_average_of_data_test.get("/test_rolling_average/")
 async def test_rolling_average(background_tasks: BackgroundTasks):
     img = VisualiserRollingAverageOfData.create_rolling_average_test_img(window_size=5)
     background_tasks.add_task(img.close)

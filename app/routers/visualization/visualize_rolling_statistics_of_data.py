@@ -7,6 +7,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_visualise_rolling_statistics_of_data = APIRouter(prefix="/visualize_rolling_statistics_of_data")
+router_visualise_rolling_statistics_of_data_test = APIRouter(prefix="/test_visualize_rolling_statistics_of_data")
 
 
 @router_visualise_rolling_statistics_of_data.post("/create_rolling_statistics_of_selected_data/")
@@ -21,7 +22,7 @@ async def create_rolling_statistics_of_selected_data(background_tasks: Backgroun
     return Response(img.getvalue(), headers=headers, media_type='image/png')
 
 
-@router_visualise_rolling_statistics_of_data.get("/test_rolling_statistics/")
+@router_visualise_rolling_statistics_of_data_test.get("/test_rolling_statistics/")
 async def test_rolling_statistics(background_tasks: BackgroundTasks):
     img = VisualiserRollingStatisticsOfData.create_rolling_statistics_test_img(window_size=5)
     background_tasks.add_task(img.close)

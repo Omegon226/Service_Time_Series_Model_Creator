@@ -8,6 +8,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_data_delete_nan = APIRouter(prefix="/data_delete_nan")
+router_data_delete_nan_test = APIRouter(prefix="/test_data_delete_nan")
 
 
 @router_data_delete_nan.post("/delete_nan/")
@@ -30,7 +31,7 @@ async def change_nan(request: SetDataChangeNan):
             "nan count": str(app.service_global_variables.data.time_series_work.df_work.isna().sum().sum())}
 
 
-@router_data_delete_nan.get("/test_check_time_series_work_df/")
+@router_data_delete_nan_test.get("/test_check_time_series_work_df/")
 async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),

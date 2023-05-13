@@ -7,6 +7,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_visualise_hist_of_data = APIRouter(prefix="/visualise_hist_of_data")
+router_visualise_hist_of_data_test = APIRouter(prefix="/test_visualise_hist_of_data")
 
 
 @router_visualise_hist_of_data.post("/create_hist_of_all_data/")
@@ -17,7 +18,7 @@ async def create_hist_of_all_data(background_tasks: BackgroundTasks):
     return Response(img.getvalue(), headers=headers, media_type='image/png')
 
 
-@router_visualise_hist_of_data.get("/test_hist/")
+@router_visualise_hist_of_data_test.get("/test_hist/")
 async def test_hist(background_tasks: BackgroundTasks):
     img = VisualiserHistOfData.create_hist_test_img()
     background_tasks.add_task(img.close)

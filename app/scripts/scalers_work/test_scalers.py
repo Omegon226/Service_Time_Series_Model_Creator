@@ -22,7 +22,7 @@ console_handler.setFormatter(logg_formatter)
 logger.addHandler(console_handler)
 
 
-class CreatorCreateScalers:
+class TesterCreateScalers:
     @staticmethod
     def create_max_abs_scaler_for_all_data(time_series_df: TimeSeriesDF):
         try:
@@ -40,7 +40,7 @@ class CreatorCreateScalers:
             raise http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_min_mas_scaler_for_all_data(time_series_df: TimeSeriesDF):
+    def create_min_max_scaler_for_all_data(time_series_df: TimeSeriesDF):
         try:
             timer_start: float = perf_counter()
 
@@ -70,3 +70,34 @@ class CreatorCreateScalers:
         except Exception as error:
             error_message: str = "Произошла ошибка при создании скейлера StandardScaler"
             raise http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def save_min_max_scaler(min_max_scaler: MinMaxScaler):
+        try:
+            timer_start: float = perf_counter()
+
+            min_max_scaler.save()
+
+            timer_end: float = perf_counter()
+            logger.info(f"Сохранение MinMaxScaler прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+        except Exception as error:
+            error_message: str = "Произошла ошибка при сохранении MinMaxScaler"
+            raise http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def load_min_max_scaler():
+        try:
+            timer_start: float = perf_counter()
+
+            min_max_scaler = MinMaxScaler.load()
+
+            timer_end: float = perf_counter()
+            logger.info(f"Загрузка MinMaxScaler прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+
+            return min_max_scaler
+        except Exception as error:
+            error_message: str = "Произошла ошибка при загрузке MinMaxScaler"
+            raise http_error(error_message, error, logger=logger)
+

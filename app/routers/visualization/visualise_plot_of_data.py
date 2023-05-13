@@ -7,6 +7,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_visualise_plot_of_data = APIRouter(prefix="/visualise_plot_of_data")
+router_visualise_plot_of_data_test = APIRouter(prefix="/test_visualise_plot_of_data")
 
 
 @router_visualise_plot_of_data.post("/create_plot_of_all_data/")
@@ -17,7 +18,7 @@ async def create_plot_of_all_data(background_tasks: BackgroundTasks):
     return Response(img.getvalue(), headers=headers, media_type='image/png')
 
 
-@router_visualise_plot_of_data.get("/test_plot/")
+@router_visualise_plot_of_data_test.get("/test_plot/")
 async def test_plot(background_tasks: BackgroundTasks):
     img = VisualiserPlotOfData.create_plot_test_img()
     background_tasks.add_task(img.close)

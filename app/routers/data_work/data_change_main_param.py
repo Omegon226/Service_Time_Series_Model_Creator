@@ -7,6 +7,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_data_change_main_param = APIRouter(prefix="/data_change_main_param")
+router_data_change_main_param_test = APIRouter(prefix="/test_data_change_main_param")
 
 
 @router_data_change_main_param.post("/set_param/")
@@ -18,7 +19,7 @@ async def set_param(request: SetDataMainParamRequest):
     return {"result": "Запрос был выполнен успешно!"}
 
 
-@router_data_change_main_param.get("/test_check_time_series_work_df/")
+@router_data_change_main_param_test.get("/test_check_time_series_work_df/")
 async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),

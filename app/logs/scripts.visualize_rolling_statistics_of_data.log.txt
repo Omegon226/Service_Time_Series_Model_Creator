@@ -5,3 +5,5 @@
 2023-05-01 16:45:54,277|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра 07HAH10CP901 (rolling_statistics)
 2023-05-01 16:50:36,348|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра 07HAH10CP901 (rolling_statistics)
 2023-05-01 17:23:08,613|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра 07HAH10CP901 (rolling_statistics)
+2023-05-13 14:51:44,791|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание тестовой визуализации (rolling_statistics)
+2023-05-13 14:51:45,536|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание тестовой визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.7449794999556616

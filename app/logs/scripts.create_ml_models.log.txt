@@ -1,0 +1,184 @@
+2023-05-13 14:59:22,823|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при сохранении KerasDenseModel
+2023-05-13 14:59:22,824|ERROR|app.scripts.ml_models_work.test_ml_models|app/resources/testing_ml_models is not a directory
+2023-05-13 15:00:16,947|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при сохранении KerasDenseModel
+2023-05-13 15:00:16,948|ERROR|app.scripts.ml_models_work.test_ml_models|app/resources/testing_ml_models is not a directory
+2023-05-13 15:02:15,102|INFO|app.scripts.ml_models_work.test_ml_models|Сохранение KerasDenseModel прошло успешно! Затрачено времени: 0.1397245000116527
+2023-05-13 15:04:01,176|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при загрузке KerasDenseModel
+2023-05-13 15:04:01,177|ERROR|app.scripts.ml_models_work.test_ml_models|No file or directory found at app/resources/testing_ml_models\keras_dense_model
+2023-05-13 15:04:37,382|INFO|app.scripts.ml_models_work.test_ml_models|Сохранение KerasDenseModel прошло успешно! Затрачено времени: 0.1322239000000991
+2023-05-13 15:04:39,669|INFO|app.scripts.ml_models_work.test_ml_models|Загрузка KerasDenseModel прошло успешно! Затрачено времени: 0.09167349996278062
+2023-05-13 15:06:05,729|INFO|app.scripts.ml_models_work.test_ml_models|Загрузка KerasDenseModel прошло успешно! Затрачено времени: 0.14723110001068562
+2023-05-13 15:06:16,090|INFO|app.scripts.ml_models_work.test_ml_models|Создание KerasDenseModel прошло успешно! Затрачено времени: 0.038575700018554926
+2023-05-13 15:07:21,385|INFO|app.scripts.ml_models_work.test_ml_models|Создание KerasDenseModel прошло успешно! Затрачено времени: 0.10129409999353811
+2023-05-13 15:14:58,344|INFO|app.scripts.ml_models_work.test_ml_models|Сохранение KerasDenseModel прошло успешно! Затрачено времени: 0.15366040001390502
+2023-05-13 15:15:11,191|INFO|app.scripts.ml_models_work.test_ml_models|Загрузка KerasDenseModel прошло успешно! Затрачено времени: 0.07807470002444461
+2023-05-13 15:26:07,401|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:26:08,412|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1284, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1050, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "KerasDenseModel" is incompatible with the layer: expected shape=(None, 100, 5), found shape=(None, 1, 100, 5)
+
+2023-05-13 15:33:15,824|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:33:15,825|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1284, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1051, in train_step
+        loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1109, in compute_loss
+        return self.compiled_loss(
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+        loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 142, in __call__
+        losses = call_fn(y_true, y_pred)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 268, in call  **
+        return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 1863, in huber
+        error = tf.subtract(y_pred, y_true)
+
+    ValueError: Dimensions must be equal, but are 10 and 5 for '{{node huber/Sub}} = Sub[T=DT_FLOAT](KerasDenseModel/output_layer/BiasAdd, IteratorGetNext:1)' with input shapes: [?,10], [?,10,5].
+
+2023-05-13 15:34:16,452|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:34:16,452|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1284, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1051, in train_step
+        loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1109, in compute_loss
+        return self.compiled_loss(
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+        loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 142, in __call__
+        losses = call_fn(y_true, y_pred)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 268, in call  **
+        return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 1863, in huber
+        error = tf.subtract(y_pred, y_true)
+
+    ValueError: Dimensions must be equal, but are 10 and 5 for '{{node huber/Sub}} = Sub[T=DT_FLOAT](KerasDenseModel/output_layer/BiasAdd, IteratorGetNext:1)' with input shapes: [?,10], [?,10,5].
+
+2023-05-13 15:37:05,636|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:37:05,637|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1284, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1051, in train_step
+        loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1109, in compute_loss
+        return self.compiled_loss(
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+        loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 142, in __call__
+        losses = call_fn(y_true, y_pred)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 268, in call  **
+        return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\losses.py", line 1470, in mean_squared_error
+        return backend.mean(tf.math.squared_difference(y_pred, y_true), axis=-1)
+
+    ValueError: Dimensions must be equal, but are 10 and 5 for '{{node mean_squared_error/SquaredDifference}} = SquaredDifference[T=DT_FLOAT](KerasDenseModel/output_layer/BiasAdd, IteratorGetNext:1)' with input shapes: [?,10], [?,10,5].
+
+2023-05-13 15:40:41,553|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:40:41,554|ERROR|app.scripts.ml_models_work.test_ml_models|KerasDenseModel.__init__() missing 1 required positional argument: 'predict_param'
+2023-05-13 15:40:57,051|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:40:57,051|ERROR|app.scripts.ml_models_work.test_ml_models|KerasDenseModel.__init__() missing 1 required positional argument: 'predict_param'
+2023-05-13 15:41:08,639|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании и обучении KerasDenseModel
+2023-05-13 15:41:08,639|ERROR|app.scripts.ml_models_work.test_ml_models|too many indices for array: array is 2-dimensional, but 3 were indexed
+2023-05-13 15:44:17,063|INFO|app.scripts.ml_models_work.test_ml_models|Создание и обучение KerasDenseModel прошло успешно! Затрачено времени: 42.3612372999778
+2023-05-13 15:45:16,590|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:45:16,590|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "KerasDenseModel" is incompatible with the layer: expected shape=(None, 100, 5), found shape=(None, 5)
+
+2023-05-13 15:48:23,214|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:48:23,215|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "KerasDenseModel" is incompatible with the layer: expected shape=(None, 100, 5), found shape=(None, 5)
+
+2023-05-13 15:49:45,294|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:49:45,294|ERROR|app.scripts.ml_models_work.test_ml_models|cannot reshape array of size 500 into shape (1,191,100)
+2023-05-13 15:51:22,087|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:51:23,007|ERROR|app.scripts.ml_models_work.test_ml_models|plot() got an unexpected keyword argument 'x'
+2023-05-13 15:53:18,678|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:53:18,679|ERROR|app.scripts.ml_models_work.test_ml_models|'numpy.ndarray' object has no attribute 'values'
+2023-05-13 15:53:44,609|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:53:44,610|ERROR|app.scripts.ml_models_work.test_ml_models|x and y must have same first dimension, but have shapes (100,) and (200, 5)
+2023-05-13 15:54:13,566|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при создании, обучении и построение визуализации KerasDenseModel
+2023-05-13 15:54:13,567|ERROR|app.scripts.ml_models_work.test_ml_models|x and y must have same first dimension, but have shapes (10,) and (1, 10)
+2023-05-13 15:54:53,916|INFO|app.scripts.ml_models_work.test_ml_models|Создание, обучение и построение визуализации KerasDenseModel прошло успешно! Затрачено времени: 1.938741600024514
+2023-05-13 15:56:19,837|INFO|app.scripts.ml_models_work.test_ml_models|Создание, обучение и построение визуализации KerasDenseModel прошло успешно! Затрачено времени: 1.9593089999980293
+2023-05-13 15:59:33,262|CRITICAL|app.scripts.ml_models_work.test_ml_models|Произошла ошибка при прогнозировании KerasDenseModel
+2023-05-13 15:59:33,263|ERROR|app.scripts.ml_models_work.test_ml_models|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2169, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2155, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2143, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 2111, in predict_step
+        return self(x, training=False)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "KerasDenseModel" is incompatible with the layer: expected shape=(None, 100, 5), found shape=(None, 5)
+
+2023-05-13 16:00:15,378|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.28976500005228445
+2023-05-13 16:00:46,894|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.14167410001391545
+2023-05-13 16:01:26,216|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.2684224999975413
+2023-05-13 16:02:11,014|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 11.271376299962867
+2023-05-13 16:02:32,888|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.2665854999795556
+2023-05-13 16:02:52,188|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.26798230002168566
+2023-05-13 16:03:37,774|INFO|app.scripts.ml_models_work.test_ml_models|Прогнозирование KerasDenseModel прошло успешно! Затрачено времени: 0.3484854999696836

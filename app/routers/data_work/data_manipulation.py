@@ -9,6 +9,7 @@ from app.models.data_models.time_series_df import TimeSeriesDF
 
 
 router_data_manipulation = APIRouter(prefix="/data_manipulation")
+router_data_manipulation_test = APIRouter(prefix="/test_data_manipulation")
 
 
 @router_data_manipulation.post("/get_statistics_of_time_series/")
@@ -36,7 +37,7 @@ async def change_data_params(request: SetDataChangeDataParams):
     return {"result": "Запрос был выполнен успешно!"}
 
 
-@router_data_manipulation.get("/test_check_time_series_work_df/")
+@router_data_manipulation_test.get("/test_check_time_series_work_df/")
 async def test_check_time_series_work_df():
     return {"result_type": str(type(app.service_global_variables.data.time_series_work)),
             "result_data": app.service_global_variables.data.time_series_work.df_work.head(4).to_dict(),

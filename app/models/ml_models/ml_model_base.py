@@ -1,14 +1,14 @@
 from abc import ABC, abstractmethod
 
 
-class ScalerBase(ABC):
+class MLModelBase(ABC):
 
     @abstractmethod
     def fit(self, data):
         pass
 
     @abstractmethod
-    def transform(self, data):
+    def predict(self, data):
         pass
 
     @abstractmethod
@@ -18,8 +18,4 @@ class ScalerBase(ABC):
     @staticmethod
     @abstractmethod
     def load(path: str, name: str):
-        pass
-
-    @abstractmethod
-    def get_feature_names_out(self):
         pass

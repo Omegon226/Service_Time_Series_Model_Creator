@@ -5,20 +5,21 @@ import logging
 from time import perf_counter
 
 # Импорт routers
-from routers.data_work.data_import import router_data_import
-from routers.data_work.data_change_main_param import router_data_change_main_param
-from routers.data_work.data_delete_nan import router_data_delete_nan
-from routers.data_work.data_manipulation import router_data_manipulation
-from routers.data_work.data_create_param import router_data_create_param
-from routers.visualization.visualise_plot_of_data import router_visualise_plot_of_data
-from routers.visualization.visualise_violinplot_of_data import router_visualise_violinplot_of_data
-from routers.visualization.visualise_hist_of_data import router_visualise_hist_of_data
-from routers.visualization.visualise_boxplot_of_data import router_visualise_boxplot_of_data
-from routers.visualization.visualise_corrheatmap_of_data import router_visualise_corrheatmap_of_data
-from routers.visualization.visualize_rolling_statistics_of_data import router_visualise_rolling_statistics_of_data
-from routers.visualization.visualize_rolling_average_of_data import router_visualise_rolling_average_of_data
-from routers.scalers_work.test_scalers import router_test_scalers
-from routers.scalers_work.test_column_transformer import router_test_column_transformer
+from routers.data_work.data_import import router_data_import, router_data_import_test
+from routers.data_work.data_change_main_param import router_data_change_main_param, router_data_change_main_param_test
+from routers.data_work.data_delete_nan import router_data_delete_nan, router_data_delete_nan_test
+from routers.data_work.data_manipulation import router_data_manipulation, router_data_manipulation_test
+from routers.data_work.data_create_param import router_data_create_param, router_data_create_param_test
+from routers.visualization.visualise_plot_of_data import router_visualise_plot_of_data, router_visualise_plot_of_data_test
+from routers.visualization.visualise_violinplot_of_data import router_visualise_violinplot_of_data, router_visualise_violinplot_of_data_test
+from routers.visualization.visualise_hist_of_data import router_visualise_hist_of_data, router_visualise_hist_of_data_test
+from routers.visualization.visualise_boxplot_of_data import router_visualise_boxplot_of_data, router_visualise_boxplot_of_data_test
+from routers.visualization.visualise_corrheatmap_of_data import router_visualise_corrheatmap_of_data, router_visualise_corrheatmap_of_data_test
+from routers.visualization.visualize_rolling_statistics_of_data import router_visualise_rolling_statistics_of_data, router_visualise_rolling_statistics_of_data_test
+from routers.visualization.visualize_rolling_average_of_data import router_visualise_rolling_average_of_data, router_visualise_rolling_average_of_data_test
+from routers.scalers_work.test_scalers import router_test_scalers_test
+from routers.scalers_work.test_column_transformer import router_test_column_transformer_test
+from routers.ml_models_work.test_ml_models import router_test_ml_models_test
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -43,61 +44,77 @@ def main():
     Что здесь происходит:
         - Подключение router
     """
-    logger.info("Идёт подключение роутера для импорта данных в сервис")
+    logger.info("Идёт подключение роутеров для импорта данных в сервис")
     app.include_router(router_data_import)
-    logger.info("Роутер для импорта данных в сервис успешно подключён!")
+    app.include_router(router_data_import_test)
+    logger.info("Роутеры для импорта данных в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для изменения влияющего параметра")
+    logger.info("Идёт подключение роутеров для изменения влияющего параметра")
     app.include_router(router_data_change_main_param)
-    logger.info("Роутер для изменения влияющего параметра в сервис успешно подключён!")
+    app.include_router(router_data_change_main_param_test)
+    logger.info("Роутеры для изменения влияющего параметра в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для работы с NaN значениями")
+    logger.info("Идёт подключение роутеров для работы с NaN значениями")
     app.include_router(router_data_delete_nan)
-    logger.info("Роутер для работы с NaN значениями в сервис успешно подключён!")
+    app.include_router(router_data_delete_nan_test)
+    logger.info("Роутеры для работы с NaN значениями в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для манипуляции над данными")
+    logger.info("Идёт подключение роутеров для манипуляции над данными")
     app.include_router(router_data_manipulation)
-    logger.info("Роутер для манипуляции над данными в сервис успешно подключён!")
+    app.include_router(router_data_manipulation_test)
+    logger.info("Роутеры для манипуляции над данными в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания нового параметра")
+    logger.info("Идёт подключение роутеров для создания нового параметра")
     app.include_router(router_data_create_param)
-    logger.info("Роутер для создания нового параметра в сервис успешно подключён!")
+    app.include_router(router_data_create_param_test)
+    logger.info("Роутеры для создания нового параметра в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (plot)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (plot)")
     app.include_router(router_visualise_plot_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (plot) в сервис успешно подключён!")
+    app.include_router(router_visualise_plot_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (plot) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (violinplot)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (violinplot)")
     app.include_router(router_visualise_violinplot_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (violinplot) в сервис успешно подключён!")
+    app.include_router(router_visualise_violinplot_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (violinplot) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (hist)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (hist)")
     app.include_router(router_visualise_hist_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (hist) в сервис успешно подключён!")
+    app.include_router(router_visualise_hist_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (hist) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (boxplot)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (boxplot)")
     app.include_router(router_visualise_boxplot_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (boxplot) в сервис успешно подключён!")
+    app.include_router(router_visualise_boxplot_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (boxplot) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (corrheatmap)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (corrheatmap)")
     app.include_router(router_visualise_corrheatmap_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (corrheatmap) в сервис успешно подключён!")
+    app.include_router(router_visualise_corrheatmap_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (corrheatmap) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (rolling_statistics)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (rolling_statistics)")
     app.include_router(router_visualise_rolling_statistics_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (rolling_statistics) в сервис успешно подключён!")
+    app.include_router(router_visualise_rolling_statistics_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (rolling_statistics) в сервис успешно подключён!")
 
-    logger.info("Идёт подключение роутера для создания визуализации временных рядов (rolling_average)")
+    logger.info("Идёт подключение роутеров для создания визуализации временных рядов (rolling_average)")
     app.include_router(router_visualise_rolling_average_of_data)
-    logger.info("Роутер для создания визуализации временных рядов (rolling_average) в сервис успешно подключён!")
+    app.include_router(router_visualise_rolling_average_of_data_test)
+    logger.info("Роутеры для создания визуализации временных рядов (rolling_average) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования создания скейлеров")
-    app.include_router(router_test_scalers)
+    app.include_router(router_test_scalers_test)
     logger.info("Роутер для тестирования создания скейлеров в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования создания колумн трансформера")
-    app.include_router(router_test_column_transformer)
+    app.include_router(router_test_column_transformer_test)
     logger.info("Роутер для тестирования создания колумн трансформера в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для тестирования ML Моделей")
+    app.include_router(router_test_ml_models_test)
+    logger.info("Роутер для тестирования создания ML Моделей в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

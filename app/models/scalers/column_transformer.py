@@ -1,10 +1,34 @@
 from app.models.data_models.time_series_df import TimeSeriesDF
 from app.scripts.http_error import http_error
+import joblib
+import os
 
 
 class ColumnTransformer:
     def __init__(self, data: TimeSeriesDF):
         self.sequence_of_creating_new_params = data.sequence_of_creating_new_params
+        self.sequence_of_columns = list(data.df_work.columns.values)
+        self.data_columns = data.data_params
+        self.already_exists_new_columns = False
+
+    def save(self, path: str = "app/resources/testing_column_transformers", name: str = "column_transformer"):
+        joblib.dump(self, os.path.join(path, name+".joblib"))
+
+    @staticmethod
+    def load(path: str = "app/resources/testing_column_transformers", name: str = "column_transformer.joblib"):
+        return joblib.load(os.path.join(path, name))
+
+    def check_for_needed_columns(self, time_series_df: TimeSeriesDF):
+        if set(self.sequence_of_columns).issubset(set(list(time_series_df.df_work.columns.values))):
+            return True
+        else:
+            return False
+
+    def return_needed_columns(self, time_series_df: TimeSeriesDF):
+        return list(set(self.sequence_of_columns) - set(list(time_series_df.df_work.columns.values)))
+
+    def sort_columns_in_needed_sequence(self, time_series_df: TimeSeriesDF):
+        return time_series_df.df_work[self.sequence_of_columns]
 
     def create_new_columns(self, time_series_df: TimeSeriesDF):
         try:
@@ -13,37 +37,62 @@ class ColumnTransformer:
                 if new_param["param"] == "mean":
                     time_series_df = ColumnTransformer._add_mean(time_series_df, new_param["param_name"],
                                                                  new_param["data_params"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "median":
                     time_series_df = ColumnTransformer._add_median(time_series_df, new_param["param_name"],
                                                                    new_param["data_params"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "range":
                     time_series_df = ColumnTransformer._add_range(time_series_df, new_param["param_name"],
                                                                   new_param["data_params"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "std":
                     time_series_df = ColumnTransformer._add_std(time_series_df, new_param["param_name"],
                                                                 new_param["data_params"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "rolling mean":
                     time_series_df = ColumnTransformer._add_rolling_mean(time_series_df, new_param["param_name"],
                                                                          new_param["data_params"],
                                                                          new_param["window_size"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "rolling median":
                     time_series_df = ColumnTransformer._add_rolling_median(time_series_df, new_param["param_name"],
                                                                            new_param["data_params"],
                                                                            new_param["window_size"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "rolling range":
                     time_series_df = ColumnTransformer._add_rolling_range(time_series_df, new_param["param_name"],
                                                                           new_param["data_params"],
                                                                           new_param["window_size"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 elif new_param["param"] == "rolling std":
                     time_series_df = ColumnTransformer._add_rolling_std(time_series_df, new_param["param_name"],
                                                                         new_param["data_params"],
                                                                         new_param["window_size"])
+                    if not self.already_exists_new_columns:
+                        self.sequence_of_columns += [new_param["param_name"]]
+
                 else:
                     error_message = f"Переданный тип параметра ({new_param['param']}) для создания нового параметра " \
                                     f"не существует или не реализован в ColumnTransformer"
                     raise Exception(error_message)
 
-                return time_series_df
+            self.already_exists_new_columns = True
+            return time_series_df
 
         except Exception as error:
             error_message = f"Произошла ошибка при создании новых параметров в объекте ColumnTransformer"
