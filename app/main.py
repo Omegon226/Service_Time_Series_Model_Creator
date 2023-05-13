@@ -20,6 +20,7 @@ from routers.visualization.visualize_rolling_average_of_data import router_visua
 from routers.scalers_work.test_scalers import router_test_scalers_test
 from routers.scalers_work.test_column_transformer import router_test_column_transformer_test
 from routers.ml_models_work.test_ml_models import router_test_ml_models_test
+from routers.pipeline_work.test_create_pipeline import router_test_create_pipeline_test
 
 # Создание приложения FastAPI
 app = FastAPI()
@@ -106,15 +107,19 @@ def main():
 
     logger.info("Идёт подключение роутера для тестирования создания скейлеров")
     app.include_router(router_test_scalers_test)
-    logger.info("Роутер для тестирования создания скейлеров в сервис успешно подключён!")
+    logger.info("Роутер для тестирования скейлеров в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования создания колумн трансформера")
     app.include_router(router_test_column_transformer_test)
-    logger.info("Роутер для тестирования создания колумн трансформера в сервис успешно подключён!")
+    logger.info("Роутер для тестирования колумн трансформера в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования ML Моделей")
     app.include_router(router_test_ml_models_test)
-    logger.info("Роутер для тестирования создания ML Моделей в сервис успешно подключён!")
+    logger.info("Роутер для тестирования ML Моделей в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для тестирования Пайплайнов")
+    app.include_router(router_test_create_pipeline_test)
+    logger.info("Роутер для тестирования Пайплайнов в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

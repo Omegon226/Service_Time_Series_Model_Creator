@@ -1,0 +1,19 @@
+2023-05-13 21:07:32,389|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание Pipeline прошло успешно! Затрачено времени: 0.19419700000435114
+2023-05-13 21:08:48,210|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и сохранение Pipeline прошло успешно! Затрачено времени: 0.10346950008533895
+2023-05-13 21:09:02,396|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании и сохранении Pipeline
+2023-05-13 21:09:02,397|ERROR|app.scripts.pipeline_work.test_create_pipeline|[Errno 2] No such file or directory: 'app/resources/testing_scalers\\pipeline\\column_transformer.dill'
+2023-05-13 21:09:49,740|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и сохранение Pipeline прошло успешно! Затрачено времени: 0.14545609999913722
+2023-05-13 21:19:15,389|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании и обучении Pipeline
+2023-05-13 21:19:16,612|ERROR|app.scripts.pipeline_work.test_create_pipeline|ColumnTransformer.check_for_needed_columns() missing 1 required positional argument: 'time_series_df'
+2023-05-13 21:51:09,446|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании и обучении Pipeline
+2023-05-13 21:51:09,447|ERROR|app.scripts.pipeline_work.test_create_pipeline|(slice(-100, None, None), 2)
+2023-05-13 21:52:08,619|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и обучение Pipeline прошло успешно! Затрачено времени: 1.9273181000025943
+2023-05-13 21:53:06,403|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании и обучении Pipeline
+2023-05-13 21:53:06,403|ERROR|app.scripts.pipeline_work.test_create_pipeline|x and y must have same first dimension, but have shapes (100,) and (300,)
+2023-05-13 21:53:24,312|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании и обучении Pipeline
+2023-05-13 21:53:24,312|ERROR|app.scripts.pipeline_work.test_create_pipeline|x and y must have same first dimension, but have shapes (100,) and (300,)
+2023-05-13 21:54:19,420|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и обучение Pipeline прошло успешно! Затрачено времени: 1.9402786999708042
+2023-05-13 21:54:47,482|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и обучение Pipeline прошло успешно! Затрачено времени: 1.9448522999882698
+2023-05-13 21:55:22,735|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании, обучении и предсказании Pipeline
+2023-05-13 21:55:22,735|ERROR|app.scripts.pipeline_work.test_create_pipeline|'KerasDenseModel' object has no attribute 'perdict'
+2023-05-13 21:56:05,489|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание, обучение и предсказание Pipeline прошло успешно! Затрачено времени: 1.9370711999945343

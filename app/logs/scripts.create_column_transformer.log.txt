@@ -27,3 +27,9 @@
 2023-05-13 15:00:55,144|INFO|app.scripts.scalers_work.test_scalers|Сохранение MinMaxScaler прошло успешно! Затрачено времени: 0.0016284000012092292
 2023-05-13 15:02:05,065|INFO|app.scripts.scalers_work.test_scalers|Создание MinMaxScaler для всех данных прошло успешно! Затрачено времени: 0.002007500035688281
 2023-05-13 15:02:05,067|INFO|app.scripts.scalers_work.test_scalers|Сохранение MinMaxScaler прошло успешно! Затрачено времени: 0.0016174999764189124
+2023-05-13 19:32:20,047|INFO|app.scripts.scalers_work.test_column_transformer|Создание ColumnTransformer для всех данных прошло успешно! Затрачено времени: 2.4600070901215076e-05
+2023-05-13 19:32:20,048|CRITICAL|app.scripts.scalers_work.test_column_transformer|Произошла ошибка при сохранении ColumnTransformer
+2023-05-13 19:32:20,048|ERROR|app.scripts.scalers_work.test_column_transformer|file must have a 'write' attribute
+2023-05-13 19:35:46,612|INFO|app.scripts.scalers_work.test_column_transformer|Создание ColumnTransformer для всех данных прошло успешно! Затрачено времени: 2.559996210038662e-05
+2023-05-13 19:35:46,614|INFO|app.scripts.scalers_work.test_column_transformer|Сохранение ColumnTransformer прошло успешно! Затрачено времени: 0.0009564999490976334
+2023-05-13 19:35:59,766|INFO|app.scripts.scalers_work.test_column_transformer|Загрузка ColumnTransformer прошло успешно! Затрачено времени: 0.0002842999529093504

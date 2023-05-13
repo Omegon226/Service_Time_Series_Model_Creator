@@ -26,7 +26,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10)
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
 
             timer_end: float = perf_counter()
             logger.info(f"Создание KerasDenseModel прошло успешно! "
@@ -41,7 +41,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10)
+            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
             model.fit(time_series_df.df_work.values, return_plot=False)
 
             timer_end: float = perf_counter()
@@ -56,7 +56,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10)
+            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
             img = model.fit(time_series_df.df_work.values, return_plot=True)
 
             timer_end: float = perf_counter()
@@ -72,7 +72,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10)
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
             result = model.predict(time_series_df.df_work.values)
 
             timer_end: float = perf_counter()
@@ -88,7 +88,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10)
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
             model.save()
 
             timer_end: float = perf_counter()

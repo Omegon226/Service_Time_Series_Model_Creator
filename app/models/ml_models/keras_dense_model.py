@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from numpy.lib.stride_tricks import sliding_window_view
 import numpy as np
-import joblib
+import dill
 import os
 import io
 
@@ -16,7 +16,7 @@ sns.set_theme()
 
 class KerasDenseModel(MLModelBase):
     def __init__(self, hidden_layers_size: list, hidden_layers_activation: list, amount_of_params: int,
-                 horizon_for_prediction: int, horizon_of_prediction: int,
+                 horizon_for_prediction: int, horizon_of_prediction: int, param_for_prediction: str,
                  loss="huber", optimizer="adam", metrics="MSE", name="KerasDenseModel", **kwargs):
 
         input_layer = keras.Input(shape=(horizon_for_prediction, amount_of_params), name="input_layer")
@@ -48,7 +48,7 @@ class KerasDenseModel(MLModelBase):
         self.horizon_for_prediction = horizon_for_prediction
         self.horizon_of_prediction = horizon_of_prediction
         self.amount_of_params = amount_of_params
-
+        self.param_for_prediction = param_for_prediction
 
         if "epochs" in kwargs.keys():
             self.epochs = kwargs["epochs"]
@@ -71,12 +71,14 @@ class KerasDenseModel(MLModelBase):
         if test_split is None:
             test_split = self.test_split
 
-        x = sliding_window_view(data[:-self.horizon_of_prediction],
+        columns = list(data.columns)
+
+        x = sliding_window_view(data.values[:-self.horizon_of_prediction],
                                 window_shape=(self.horizon_for_prediction, data.shape[1]))
         x = np.squeeze(x)
-        y = sliding_window_view(data[self.horizon_for_prediction:],
+        y = sliding_window_view(data.values[self.horizon_for_prediction:],
                                 window_shape=(self.horizon_of_prediction, data.shape[1]))
-        y = np.squeeze(y)[:, :, 2]
+        y = np.squeeze(y)[:, :, columns.index(self.param_for_prediction)]
 
         test_size = int(x.shape[0] * test_split)
 
@@ -90,19 +92,21 @@ class KerasDenseModel(MLModelBase):
             return self.__create_plot_of_accuracy(data)
 
     def __create_plot_of_accuracy(self, data):
-        x = sliding_window_view(data[:-self.horizon_of_prediction],
+        x = sliding_window_view(data.values[:-self.horizon_of_prediction],
                                 window_shape=(self.horizon_for_prediction, data.shape[1]))
         x = np.squeeze(x)
         x = x[-1].reshape(1, x.shape[1], x.shape[2])
 
+        columns = list(data.columns)
+
         result = self.keras_model.predict(x)
-        x_1 = np.arange(0, self.horizon_for_prediction)
-        x_2 = np.arange(self.horizon_for_prediction, self.horizon_for_prediction + self.horizon_of_prediction)
+        x_1 = np.arange(0, data.shape[0])
+        x_2 = np.arange(data.shape[0], data.shape[0] + self.horizon_of_prediction)
 
         plt.rcParams['figure.figsize'] = [7, 6]
         plt.rcParams['figure.autolayout'] = True
         fig = plt.figure()
-        plt.plot(x_1, data[-self.horizon_for_prediction:, 2])
+        plt.plot(x_1, data.values[:, columns.index(self.param_for_prediction)])
         plt.plot(x_2, result.reshape(-1))
         img_buf = io.BytesIO()
         plt.savefig(img_buf, format='png')
@@ -120,10 +124,12 @@ class KerasDenseModel(MLModelBase):
     def save(self, path: str = "app/resources/testing_ml_models", name: str = "keras_dense_model"):
         self.keras_model.save(os.path.join(path, name+".keras"), save_format="keras")
         del self.keras_model
-        joblib.dump(self, os.path.join(path, name+".joblib"))
+        with open(os.path.join(path, name+".dill"), 'wb+') as file:
+            dill.dump(self, file)
 
     @staticmethod
     def load(path: str = "app/resources/testing_ml_models", name: str = "keras_dense_model"):
-        keras_dense_model = joblib.load(os.path.join(path, name+".joblib"))
+        with open(os.path.join(path, name+".dill"), 'rb+') as file:
+            keras_dense_model = dill.load(file)
         keras_dense_model.keras_model = keras.models.load_model(os.path.join(path, name+".keras"))
         return keras_dense_model
