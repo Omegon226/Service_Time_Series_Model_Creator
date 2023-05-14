@@ -7,4 +7,8 @@ from app.models.tests.test_base import TestBase
 class RMSETest(TestBase):
     @staticmethod
     def calculate_metric(predicted: np.array, true: np.array):
-        return mean_squared_error(true, predicted, squared=False)
+        return float(mean_squared_error(true, predicted, squared=False))
+
+    @staticmethod
+    def get_metric_name():
+        return "rmse"

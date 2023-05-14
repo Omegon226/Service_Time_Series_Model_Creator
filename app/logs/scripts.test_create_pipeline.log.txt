@@ -17,3 +17,4 @@
 2023-05-13 21:55:22,735|CRITICAL|app.scripts.pipeline_work.test_create_pipeline|Произошла ошибка при создании, обучении и предсказании Pipeline
 2023-05-13 21:55:22,735|ERROR|app.scripts.pipeline_work.test_create_pipeline|'KerasDenseModel' object has no attribute 'perdict'
 2023-05-13 21:56:05,489|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание, обучение и предсказание Pipeline прошло успешно! Затрачено времени: 1.9370711999945343
+2023-05-14 17:57:10,132|INFO|app.scripts.pipeline_work.test_create_pipeline|Создание и обучение Pipeline прошло успешно! Затрачено времени: 1.5527288999874145

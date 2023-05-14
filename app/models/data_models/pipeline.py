@@ -13,7 +13,7 @@ class Pipeline:
         self.scaler = scaler
         self.ml_model = ml_model
 
-    def fit(self, data):
+    def fit(self, data, **kwargs):
         data = self.__check_and_transform_data(data)
 
         columns = data.columns
@@ -21,9 +21,12 @@ class Pipeline:
         data = self.scaler.transform(data)
         data = pd.DataFrame(data, columns=columns)
 
-        plot = self.ml_model.fit(data, return_plot=True)
-
-        return plot
+        if "tests" in kwargs.keys():
+            plot, tests = self.ml_model.fit(data, return_plot=True, **kwargs)
+            return plot, tests
+        else:
+            plot = self.ml_model.fit(data, return_plot=True, **kwargs)
+            return plot
 
     def predict(self, data):
         data = self.__check_and_transform_data(data)

@@ -26,7 +26,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
 
             timer_end: float = perf_counter()
             logger.info(f"Создание KerasDenseModel прошло успешно! "
@@ -41,7 +41,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
             model.fit(time_series_df.df_work.values, return_plot=False)
 
             timer_end: float = perf_counter()
@@ -56,7 +56,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model: KerasDenseModel = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
             img = model.fit(time_series_df.df_work.values, return_plot=True)
 
             timer_end: float = perf_counter()
@@ -72,7 +72,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
             result = model.predict(time_series_df.df_work.values)
 
             timer_end: float = perf_counter()
@@ -88,7 +88,7 @@ class TesterMlModels:
         try:
             timer_start: float = perf_counter()
 
-            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
             model.save()
 
             timer_end: float = perf_counter()

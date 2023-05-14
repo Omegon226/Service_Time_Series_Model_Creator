@@ -22,6 +22,7 @@ from routers.scalers_work.test_column_transformer import router_test_column_tran
 from routers.ml_models_work.test_ml_models import router_test_ml_models_test
 from routers.pipeline_work.test_create_pipeline import router_test_create_pipeline_test
 from routers.tests_work.test_tests import router_test_tests_test
+from routers.pipeline_work.pipelines_creator import router_pipelines_creator, router_pipelines_creator_test
 
 
 # Создание приложения FastAPI
@@ -126,6 +127,11 @@ def main():
     logger.info("Идёт подключение роутера для тестирования Тестов")
     app.include_router(router_test_tests_test)
     logger.info("Роутер для тестирования Тестов в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для создания Пайплайнов")
+    app.include_router(router_pipelines_creator)
+    app.include_router(router_pipelines_creator_test)
+    logger.info("Роутер для создания Пайплайнов в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

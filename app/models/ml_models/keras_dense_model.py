@@ -49,6 +49,7 @@ class KerasDenseModel(MLModelBase):
         self.horizon_of_prediction = horizon_of_prediction
         self.amount_of_params = amount_of_params
         self.param_for_prediction = param_for_prediction
+        self.name = name
 
         if "epochs" in kwargs.keys():
             self.epochs = kwargs["epochs"]
@@ -88,8 +89,21 @@ class KerasDenseModel(MLModelBase):
         test_y = y[-test_size:]
 
         self.keras_model.fit(x=train_x, y=train_y, epochs=epochs, validation_split=validation_split)
-        if return_plot:
-            return self.__create_plot_of_accuracy(data)
+
+        if "tests" in kwargs.keys():
+            tests_results = {}
+            result = self.keras_model.predict(test_x)
+            result_sq = np.squeeze(result)
+            test_y_sq = np.squeeze(test_y)
+            for test in kwargs["tests"]:
+                tests_results[test.get_metric_name()] = test.calculate_metric(result_sq, test_y_sq)
+
+            if return_plot:
+                return self.__create_plot_of_accuracy(data), tests_results
+
+        else:
+            if return_plot:
+                return self.__create_plot_of_accuracy(data)
 
     def __create_plot_of_accuracy(self, data):
         x = sliding_window_view(data.values[:-self.horizon_of_prediction],

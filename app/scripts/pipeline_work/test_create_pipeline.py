@@ -35,7 +35,7 @@ class TesterCreatePipeline:
 
             column_transformer = ColumnTransformer(time_series_df)
             scaler = MinMaxScaler()
-            model = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "07HAH10CP901")
+            model = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
 
             pipeline = Pipeline(column_transformer, scaler, model)
 
@@ -48,7 +48,7 @@ class TesterCreatePipeline:
             raise http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_and_fit_pipeline(time_series_df: TimeSeriesDF, influencing_param="07HAH10CP901"):
+    def create_and_fit_pipeline(time_series_df: TimeSeriesDF, influencing_param="PARAM_1"):
         try:
             timer_start: float = perf_counter()
 
@@ -69,7 +69,7 @@ class TesterCreatePipeline:
             raise http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_fit_and_predict_pipeline(time_series_df: TimeSeriesDF, influencing_param="07HAH10CP901"):
+    def create_fit_and_predict_pipeline(time_series_df: TimeSeriesDF, influencing_param="PARAM_1"):
         try:
             timer_start: float = perf_counter()
 
@@ -92,7 +92,7 @@ class TesterCreatePipeline:
             raise http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def save_pipeline(time_series_df: TimeSeriesDF, influencing_param="07HAH10CP901"):
+    def save_pipeline(time_series_df: TimeSeriesDF, influencing_param="PARAM_1"):
         try:
             timer_start: float = perf_counter()
 

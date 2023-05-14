@@ -8,3 +8,8 @@ class TestBase(ABC):
     @abstractmethod
     def calculate_metric(predicted: np.array, true: np.array):
         pass
+
+    @staticmethod
+    @abstractmethod
+    def get_metric_name():
+        pass
