@@ -6,6 +6,8 @@ from app.models.ml_models.keras_dense_model import KerasDenseModel
 
 from app.models.tests.mse_test import MSETest
 from app.models.tests.rmse_test import RMSETest
+from app.models.tests.r2_test import R2Test
+from app.models.tests.mae_test import MAETest
 
 
 # Здесь будут находиться все комбинации пайплайнов
@@ -16,4 +18,4 @@ pipelines: list = []
 
 all_scalers = {"max_abs_scaler": MaxAbsScaler, "min_max_scaler": MinMaxScaler, "standard_scaler": StandardScaler}
 all_models = {"keras_dense": KerasDenseModel}
-all_tests = {"mse": MSETest, "rmse": RMSETest}
+all_tests = {"mse": MSETest, "rmse": RMSETest, "r2": R2Test, "mae": MAETest}
