@@ -1,3 +1,4 @@
+from typing import BinaryIO
 import numpy as np
 import pandas as pd
 
@@ -27,7 +28,12 @@ class Importer:
         try:
             timer_start: float = perf_counter()
             with open(full_path, "r", encoding=encoding):
-                df: pd.DataFrame = pd.read_csv(full_path, sep=sep, decimal=decimal, dtype=np.float64, engine="python")
+                df: pd.DataFrame = pd.read_csv(full_path,
+                                               sep=sep,
+                                               decimal=decimal,
+                                               dtype=np.float64,
+                                               engine="python",
+                                               encoding=encoding)
             timer_end: float = perf_counter()
 
             logger.info(f"Скачка данных из CSV файла ({full_path}) прошла успешно! " +
@@ -77,5 +83,46 @@ class Importer:
         except Exception as error:
             error_message: str = "Ошибка при загрузке эталонных данных из JSON: " + \
                                  f"Путь: {full_path} "
+
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def import_data_from_uploaded_csv_file(file: BinaryIO, sep: str, decimal: str, encoding: str):
+        logger.info(f"Началась подгрузка данных из CSV файла, загруженный через сервис")
+        try:
+            timer_start: float = perf_counter()
+            df: pd.DataFrame = pd.read_csv(file,
+                                           sep=sep,
+                                           decimal=decimal,
+                                           dtype=np.float64,
+                                           engine="python",
+                                           encoding=encoding)
+            timer_end: float = perf_counter()
+
+            logger.info(f"Скачка данных из CSV файла прошла успешно! " +
+                        f"Затраченное время: {timer_end - timer_start}")
+            logger.debug(f"Данные: {df}")
+
+            return df
+        except Exception as error:
+            error_message: str = "Ошибка при загрузке эталонных данных из CSV: "
+
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def import_data_from_uploaded_json_file(file: BinaryIO, encoding: str):
+        logger.info(f"Началась подгрузка данных из JSON файла, загруженный через сервис")
+        try:
+            timer_start: float = perf_counter()
+            df: pd.DataFrame = pd.read_json(file, encoding=encoding)
+            timer_end: float = perf_counter()
+
+            logger.info(f"Скачка данных из JSON файла прошла успешно! " +
+                        f"Затраченное время: {timer_end - timer_start}")
+            logger.debug(f"Данные: {df}")
+
+            return df
+        except Exception as error:
+            error_message: str = "Ошибка при загрузке эталонных данных из JSON: "
 
             http_error(error_message, error, logger=logger)

@@ -1,9 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, UploadFile, Depends, File, Form
 
 import app.service_global_variables.data
 from app.models.requests_models.set_data_from_csv import SetDataFromCSVRequest
 from app.models.requests_models.set_data_from_dict import SetDataFromDictRequest
 from app.models.requests_models.set_data_from_json import SetDataFromJSONRequest
+from app.models.requests_models.set_data_from_csv_file import SetDataFromCSVFileRequest
+from app.models.requests_models.set_data_from_json_file import SetDataFromJSONFileRequest
 from app.scripts.data_work.data_import import Importer
 from app.models.data_models.time_series_df import TimeSeriesDF
 
@@ -32,6 +34,26 @@ async def set_data_from_dict(request: SetDataFromDictRequest):
 async def set_data_from_json(request: SetDataFromJSONRequest):
     result = Importer.import_data_from_json(full_path=request.full_path,
                                             encoding=request.encoding)
+    app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
+    return {"result": "Запрос был выполнен успешно!"}
+
+
+@router_data_import.post("/set_data_from_csv_file/")
+async def set_data_from_csv_file(request: SetDataFromCSVFileRequest = Depends(),
+                                 file: UploadFile = File(...)):
+    result = Importer.import_data_from_uploaded_csv_file(file=file.file,
+                                                         sep=request.sep,
+                                                         decimal=request.decimal,
+                                                         encoding=request.encoding)
+    app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
+    return {"result": "Запрос был выполнен успешно!"}
+
+
+@router_data_import.post("/set_data_from_json_file/")
+async def set_data_from_json_file(request: SetDataFromJSONFileRequest = Depends(),
+                                  file: UploadFile = File(...)):
+    result = Importer.import_data_from_uploaded_json_file(file=file.file,
+                                                          encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
     return {"result": "Запрос был выполнен успешно!"}
 

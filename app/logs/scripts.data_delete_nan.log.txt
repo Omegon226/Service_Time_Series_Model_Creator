@@ -89,3 +89,19 @@ Mean                  0
 STD                   0
 dtype: int64
 2023-04-21 18:04:38,843|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'mean' Всего осталось NaN значений: 0 Затрачено времени: 0.002848799995263107
+2023-05-15 09:51:35,846|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-05-15 09:51:35,851|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+dtype: int64
+2023-05-15 09:51:35,853|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.0015267000999301672
+2023-05-15 09:54:18,955|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 0
+2023-05-15 09:54:18,956|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+dtype: int64
+2023-05-15 09:54:18,957|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'zero' Всего осталось NaN значений: 0 Затрачено времени: 0.0001221999991685152

@@ -18,3 +18,25 @@
 2023-05-01 17:25:37,506|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание тестовой визуализации (rolling_average)
 2023-05-13 14:51:52,935|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание тестовой визуализации (rolling_average)
 2023-05-13 14:51:53,380|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание тестовой визуализации (rolling_average) прошло успешно!Затрачено времени: 0.44373080000514165
+2023-05-15 09:16:07,810|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 09:16:08,327|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5079150000819936
+2023-05-15 09:17:15,121|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 09:17:15,632|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.510505500016734
+2023-05-15 09:17:23,795|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 09:17:24,269|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.47340979997534305
+2023-05-15 09:19:09,436|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 09:19:09,922|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.4854635000228882
+2023-05-15 10:10:29,424|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 10:10:29,943|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.518225000007078
+2023-05-15 10:10:37,160|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 10:10:37,678|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5171645999653265
+2023-05-15 10:39:51,118|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 10:39:51,637|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5184335000813007
+2023-05-15 12:05:27,354|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 12:05:27,849|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.4952418999746442
+2023-05-15 12:05:54,515|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-15 12:05:55,031|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5160328999627382
+2023-05-16 20:32:04,011|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-16 20:32:04,513|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5019548000000214
+2023-05-16 20:32:39,608|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-05-16 20:32:40,110|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5012116999998852

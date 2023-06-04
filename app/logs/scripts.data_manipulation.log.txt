@@ -45,3 +45,113 @@
 2023-05-01 21:10:27,131|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['07HAH10CP901', '07LAB50CF001', '07LAB50CP002', '07LBA10CF001'] Затрачено времени: 1.300009898841381e-06
 2023-05-01 21:15:30,249|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['07HAH10CP901', '07LAB50CF001', '07LAB50CP002', '07LBA10CF001'], как данные для создания новых параметров
 2023-05-01 21:15:30,250|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['07HAH10CP901', '07LAB50CF001', '07LAB50CP002', '07LBA10CF001'] Затрачено времени: 6.00004568696022e-07
+2023-05-14 22:32:32,407|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-05-14 22:32:32,764|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.3376789999892935
+2023-05-14 22:32:32,765|DEBUG|app.scripts.data_work.data_manipulation|description: {'PARAM_1': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, 'PARAM_2': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, 'PARAM_3': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, 'PARAM_4': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, 'PARAM_5': {'count': 300.0, 'mean': 55612.30348333333, 'std': 197.457537662732, 'min': 54686.992, '25%': 55495.92175, '50%': 55639.1505, '75%': 55743.6035, 'max': 56183.117}}
+2023-05-15 09:54:29,214|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-05-15 09:54:29,227|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.01242180005647242
+2023-05-15 09:54:29,228|DEBUG|app.scripts.data_work.data_manipulation|description: {'PARAM_1': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, 'PARAM_2': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, 'PARAM_3': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, 'PARAM_4': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, 'PARAM_5': {'count': 300.0, 'mean': 55612.30348333333, 'std': 197.457537662732, 'min': 54686.992, '25%': 55495.92175, '50%': 55639.1505, '75%': 55743.6035, 'max': 56183.117}}
+2023-05-15 09:57:33,830|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 09:57:33,830|CRITICAL|app.scripts.data_work.data_manipulation|В результате заменены параметров данных произошла ошибка
+2023-05-15 09:57:33,830|ERROR|app.scripts.data_work.data_manipulation|Не хватает какого то параметра в данных
+2023-05-15 09:58:17,001|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 09:58:17,001|CRITICAL|app.scripts.data_work.data_manipulation|В результате заменены параметров данных произошла ошибка
+2023-05-15 09:58:17,002|ERROR|app.scripts.data_work.data_manipulation|Не хватает какого то параметра в данных
+2023-05-15 10:00:10,520|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:00:51,464|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] Затрачено времени: 5.1241526999510825
+2023-05-15 10:02:01,525|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:04:55,836|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:05:03,626|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] Затрачено времени: 1.2436161000514403
+2023-05-15 10:06:54,940|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:06:54,941|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:07:15,361|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов PARAM_5 из данных о временных рядах
+2023-05-15 10:07:15,364|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-05-15 10:07:15,364|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not list
+2023-05-15 10:07:26,191|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов PARAM_4 из данных о временных рядах
+2023-05-15 10:07:26,191|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-05-15 10:07:26,191|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not list
+2023-05-15 10:08:06,583|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:08:06,584|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0006291999015957117
+2023-05-15 10:09:25,026|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:09:25,028|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0008636999409645796
+2023-05-15 10:09:32,331|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:09:32,331|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 6.00004568696022e-07
+2023-05-15 10:12:57,763|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:12:57,765|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.001473700045607984
+2023-05-15 10:13:00,472|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:13:00,473|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:16:59,421|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:16:59,423|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0007688000332564116
+2023-05-15 10:17:03,008|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:17:03,008|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:18:22,145|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:18:22,148|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0015218000626191497
+2023-05-15 10:18:23,799|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:18:23,800|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-05-15 10:18:23,801|ERROR|app.scripts.data_work.data_manipulation|"['PARAM_5'] not found in axis"
+2023-05-15 10:18:27,241|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:18:27,241|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 7.00005330145359e-07
+2023-05-15 10:20:43,906|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:20:43,908|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.001459999941289425
+2023-05-15 10:20:46,745|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:20:46,745|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:21:53,932|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:21:53,935|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.001699600019492209
+2023-05-15 10:21:56,277|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:21:56,278|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 7.00005330145359e-07
+2023-05-15 10:25:18,067|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:25:18,069|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0014804000966250896
+2023-05-15 10:25:20,388|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:25:20,388|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:27:46,938|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:27:46,940|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0014811999863013625
+2023-05-15 10:27:49,132|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:27:49,132|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 7.00005330145359e-07
+2023-05-15 10:29:42,607|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:29:42,608|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0007493000011891127
+2023-05-15 10:29:45,118|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:29:45,118|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 8.00006091594696e-07
+2023-05-15 10:31:28,929|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:31:28,930|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0007205000147223473
+2023-05-15 10:31:31,191|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:31:31,191|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 9.998911991715431e-07
+2023-05-15 10:32:19,177|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:32:19,180|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0014761999482288957
+2023-05-15 10:32:21,559|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:32:21,559|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 7.00005330145359e-07
+2023-05-15 10:33:08,852|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:33:08,853|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.000771600054576993
+2023-05-15 10:33:10,931|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:33:10,931|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 7.00005330145359e-07
+2023-05-15 10:34:31,386|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:34:31,387|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] Затрачено времени: 1.00000761449337e-06
+2023-05-15 10:34:32,960|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'], как данные для создания новых параметров
+2023-05-15 10:34:32,961|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] Затрачено времени: 1.200009137392044e-06
+2023-05-15 10:35:08,912|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов PARAM_5 из данных о временных рядах
+2023-05-15 10:35:08,912|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-05-15 10:35:08,913|ERROR|app.scripts.data_work.data_manipulation|'in <string>' requires string as left operand, not list
+2023-05-15 10:35:20,972|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:35:20,973|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0006627000402659178
+2023-05-15 10:36:08,144|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:36:08,145|CRITICAL|app.scripts.data_work.data_manipulation|В результате заменены параметров данных произошла ошибка
+2023-05-15 10:36:08,145|ERROR|app.scripts.data_work.data_manipulation|Не хватает какого то параметра в данных
+2023-05-15 10:37:01,307|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 10:37:01,308|CRITICAL|app.scripts.data_work.data_manipulation|В результате заменены параметров данных произошла ошибка
+2023-05-15 10:37:01,308|ERROR|app.scripts.data_work.data_manipulation|Не хватает какого то параметра в данных
+2023-05-15 10:37:27,278|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:37:27,279|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.000695600057952106
+2023-05-15 10:37:40,478|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['MEAN_1'] из данных о временных рядах
+2023-05-15 10:37:40,478|CRITICAL|app.scripts.data_work.data_manipulation|В результате удаления параметров произошла ошибка
+2023-05-15 10:37:40,479|ERROR|app.scripts.data_work.data_manipulation|list.remove(x): x not in list
+2023-05-15 10:38:37,859|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-05-15 10:38:37,872|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.0123475999571383
+2023-05-15 10:38:37,872|DEBUG|app.scripts.data_work.data_manipulation|description: {'PARAM_1': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, 'PARAM_2': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, 'PARAM_3': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, 'PARAM_4': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, 'PARAM_5': {'count': 300.0, 'mean': 55612.30348333333, 'std': 197.457537662732, 'min': 54686.992, '25%': 55495.92175, '50%': 55639.1505, '75%': 55743.6035, 'max': 56183.117}}
+2023-05-15 10:38:47,436|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 10:38:47,437|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.0007359000155702233
+2023-05-15 12:02:41,412|INFO|app.scripts.data_work.data_manipulation|Получение статистических данных о временном ряде
+2023-05-15 12:02:41,427|INFO|app.scripts.data_work.data_manipulation|Статистика о временных рядах получена успешно! Затрачено времени: 0.014327600016258657
+2023-05-15 12:02:41,427|DEBUG|app.scripts.data_work.data_manipulation|description: {'PARAM_1': {'count': 300.0, 'mean': 131.91412333333332, 'std': 0.4180341652704158, 'min': 131.119, '25%': 131.44475, '50%': 132.1085, '75%': 132.257, 'max': 132.611}, 'PARAM_2': {'count': 300.0, 'mean': 671.2126499999999, 'std': 3.524984506832815, 'min': 663.207, '25%': 668.17975, '50%': 671.7674999999999, '75%': 673.6505, 'max': 683.433}, 'PARAM_3': {'count': 300.0, 'mean': 154.65865, 'std': 0.3718001776136998, 'min': 153.473, '25%': 154.32175, '50%': 154.768, '75%': 154.96525, 'max': 155.294}, 'PARAM_4': {'count': 300.0, 'mean': 331.3378833333333, 'std': 0.7200579290070859, 'min': 327.194, '25%': 331.16049999999996, '50%': 331.428, '75%': 331.66724999999997, 'max': 332.491}, 'PARAM_5': {'count': 300.0, 'mean': 55612.30348333333, 'std': 197.457537662732, 'min': 54686.992, '25%': 55495.92175, '50%': 55639.1505, '75%': 55743.6035, 'max': 56183.117}}
+2023-05-15 12:02:56,693|INFO|app.scripts.data_work.data_manipulation|Удаление ненужного/ых параметра/ов ['PARAM_5'] из данных о временных рядах
+2023-05-15 12:02:56,694|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно удалена/ы колонка/и ['PARAM_5'] Затрачено времени: 0.000776899978518486
+2023-05-15 12:03:12,407|INFO|app.scripts.data_work.data_manipulation|Установка параметров: ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'], как данные для создания новых параметров
+2023-05-15 12:03:12,407|INFO|app.scripts.data_work.data_manipulation|В результате работы были успешно заменены параметры данных ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4'] Затрачено времени: 6.00004568696022e-07

@@ -7,3 +7,16 @@
 2023-05-01 17:23:08,613|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра 07HAH10CP901 (rolling_statistics)
 2023-05-13 14:51:44,791|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание тестовой визуализации (rolling_statistics)
 2023-05-13 14:51:45,536|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание тестовой визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.7449794999556616
+2023-05-15 09:14:25,575|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра 07HAH10CP901 (rolling_statistics)
+2023-05-15 09:14:25,718|CRITICAL|app.scripts.visualization.visualize_rolling_statistics_of_data|Входе создании визуализации (rolling_statistics) для параметра/ов 07HAH10CP901 произошла ошибка
+2023-05-15 09:14:25,719|ERROR|app.scripts.visualization.visualize_rolling_statistics_of_data|'07HAH10CP901'
+2023-05-15 09:14:36,216|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра PARAM_1 (rolling_statistics)
+2023-05-15 09:14:37,030|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.8133511000778526
+2023-05-15 10:10:17,812|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра PARAM_1 (rolling_statistics)
+2023-05-15 10:10:18,648|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.834859500057064
+2023-05-15 10:39:40,046|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра PARAM_1 (rolling_statistics)
+2023-05-15 10:39:40,872|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.8247567000798881
+2023-05-15 12:05:06,483|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра PARAM_1 (rolling_statistics)
+2023-05-15 12:05:07,327|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.8430286999791861
+2023-05-16 20:32:49,949|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра PARAM_1 (rolling_statistics)
+2023-05-16 20:32:50,772|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.8222561000000042

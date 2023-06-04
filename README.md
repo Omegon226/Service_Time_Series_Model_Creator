@@ -2,6 +2,8 @@
 
 - FastAPI (pip install fastapi)
 - Uvicorn (pip install "uvicorn[standard]")
+- Firebase (pip install firebase)
+- Streamlit (pip install streamlit)
 - NumPy (pip install numpy)
 - Pandas (pip install pandas)
 - MatPlotLib (pip install matplotlib)
@@ -12,3 +14,4 @@
 - TensorFlow (pip install tensorflow)
 - Dill (pip install dill)
 - PyYAML (pip install pyyaml)
+- python-multipart (pip install python-multipart)

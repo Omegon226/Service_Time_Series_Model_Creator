@@ -28,6 +28,10 @@ from routers.pipeline_work.pipelines_creator import router_pipelines_creator, ro
 # Создание приложения FastAPI
 app = FastAPI()
 
+
+TEST_MODE = True
+
+
 # Создание логгера для main.py
 logger = logging.getLogger(__name__)
 logger.setLevel(10)
@@ -50,87 +54,87 @@ def main():
     """
     logger.info("Идёт подключение роутеров для импорта данных в сервис")
     app.include_router(router_data_import)
-    app.include_router(router_data_import_test)
+    app.include_router(router_data_import_test) if TEST_MODE else None
     logger.info("Роутеры для импорта данных в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для изменения влияющего параметра")
     app.include_router(router_data_change_main_param)
-    app.include_router(router_data_change_main_param_test)
+    app.include_router(router_data_change_main_param_test) if TEST_MODE else None
     logger.info("Роутеры для изменения влияющего параметра в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для работы с NaN значениями")
     app.include_router(router_data_delete_nan)
-    app.include_router(router_data_delete_nan_test)
+    app.include_router(router_data_delete_nan_test) if TEST_MODE else None
     logger.info("Роутеры для работы с NaN значениями в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для манипуляции над данными")
     app.include_router(router_data_manipulation)
-    app.include_router(router_data_manipulation_test)
+    app.include_router(router_data_manipulation_test) if TEST_MODE else None
     logger.info("Роутеры для манипуляции над данными в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания нового параметра")
     app.include_router(router_data_create_param)
-    app.include_router(router_data_create_param_test)
+    app.include_router(router_data_create_param_test) if TEST_MODE else None
     logger.info("Роутеры для создания нового параметра в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (plot)")
     app.include_router(router_visualise_plot_of_data)
-    app.include_router(router_visualise_plot_of_data_test)
+    app.include_router(router_visualise_plot_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (plot) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (violinplot)")
     app.include_router(router_visualise_violinplot_of_data)
-    app.include_router(router_visualise_violinplot_of_data_test)
+    app.include_router(router_visualise_violinplot_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (violinplot) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (hist)")
     app.include_router(router_visualise_hist_of_data)
-    app.include_router(router_visualise_hist_of_data_test)
+    app.include_router(router_visualise_hist_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (hist) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (boxplot)")
     app.include_router(router_visualise_boxplot_of_data)
-    app.include_router(router_visualise_boxplot_of_data_test)
+    app.include_router(router_visualise_boxplot_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (boxplot) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (corrheatmap)")
     app.include_router(router_visualise_corrheatmap_of_data)
-    app.include_router(router_visualise_corrheatmap_of_data_test)
+    app.include_router(router_visualise_corrheatmap_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (corrheatmap) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (rolling_statistics)")
     app.include_router(router_visualise_rolling_statistics_of_data)
-    app.include_router(router_visualise_rolling_statistics_of_data_test)
+    app.include_router(router_visualise_rolling_statistics_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (rolling_statistics) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутеров для создания визуализации временных рядов (rolling_average)")
     app.include_router(router_visualise_rolling_average_of_data)
-    app.include_router(router_visualise_rolling_average_of_data_test)
+    app.include_router(router_visualise_rolling_average_of_data_test) if TEST_MODE else None
     logger.info("Роутеры для создания визуализации временных рядов (rolling_average) в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования создания скейлеров")
-    app.include_router(router_test_scalers_test)
+    app.include_router(router_test_scalers_test) if TEST_MODE else None
     logger.info("Роутер для тестирования скейлеров в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования создания колумн трансформера")
-    app.include_router(router_test_column_transformer_test)
+    app.include_router(router_test_column_transformer_test) if TEST_MODE else None
     logger.info("Роутер для тестирования колумн трансформера в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования ML Моделей")
-    app.include_router(router_test_ml_models_test)
+    app.include_router(router_test_ml_models_test) if TEST_MODE else None
     logger.info("Роутер для тестирования ML Моделей в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования Пайплайнов")
-    app.include_router(router_test_create_pipeline_test)
+    app.include_router(router_test_create_pipeline_test) if TEST_MODE else None
     logger.info("Роутер для тестирования Пайплайнов в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для тестирования Тестов")
-    app.include_router(router_test_tests_test)
+    app.include_router(router_test_tests_test) if TEST_MODE else None
     logger.info("Роутер для тестирования Тестов в сервис успешно подключён!")
 
     logger.info("Идёт подключение роутера для создания Пайплайнов")
     app.include_router(router_pipelines_creator)
-    app.include_router(router_pipelines_creator_test)
+    app.include_router(router_pipelines_creator_test) if TEST_MODE else None
     logger.info("Роутер для создания Пайплайнов в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")

@@ -1,2 +1,10 @@
 2023-04-22 07:39:37,056|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание тестовой визуализации (boxplot)
 2023-04-22 07:39:43,617|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-05-15 09:14:04,269|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-05-15 09:14:04,629|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3582482999190688
+2023-05-15 10:09:49,454|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-05-15 10:09:49,820|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3661314999917522
+2023-05-15 10:39:08,003|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-05-15 10:39:08,374|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3706123000010848
+2023-05-15 12:04:26,284|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-05-15 12:04:26,640|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3550896999659017

@@ -1,2 +1,12 @@
 2023-04-22 07:40:18,594|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание тестовой визуализации (violinplot)
 2023-04-22 07:40:34,750|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-15 09:13:46,312|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-15 09:13:46,721|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.4075171999866143
+2023-05-15 10:09:39,498|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-15 10:09:39,892|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.3928095999872312
+2023-05-15 10:39:00,159|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-15 10:39:00,527|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.3667233999585733
+2023-05-15 12:04:09,225|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-15 12:04:09,623|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.3973715000320226
+2023-05-16 20:49:44,891|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-05-16 20:49:45,300|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.40849789999992936

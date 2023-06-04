@@ -70,8 +70,7 @@ class DataManipulator:
         logger.info(f"Установка параметров: {new_data_params}, как данные для создания новых параметров")
 
         try:
-            if not(time_series_df.main_parameter in new_data_params or
-                    time_series_df.main_parameter == new_data_params):
+            if not set(time_series_df.df_work.columns).issubset(new_data_params):
                 raise Exception("Не хватает какого то параметра в данных")
 
             timer_start: float = perf_counter()

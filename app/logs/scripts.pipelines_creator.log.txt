@@ -103,3 +103,73 @@
 2023-05-14 18:52:03,290|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при загрузке лучших Pipelin-ов
 2023-05-14 18:52:04,086|ERROR|app.scripts.pipeline_work.pipelines_creator|Index(['mse', 'rmse'], dtype='object')
 2023-05-14 18:59:40,405|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.023024599999189377
+2023-05-15 09:19:23,017|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 09:19:29,836|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.113627300015651
+2023-05-15 09:19:35,793|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.029502299963496625
+2023-05-15 10:10:43,440|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:10:43,459|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:10:43,459|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:11:43,225|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:11:50,575|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.56293460004963
+2023-05-15 10:14:18,051|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:17:11,146|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:17:11,150|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:17:11,150|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:18:44,694|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:21:01,786|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:21:19,697|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:21:21,534|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:22:03,770|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:22:52,787|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:22:57,567|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:23:47,815|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:23:48,008|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:23:48,008|ERROR|app.scripts.pipeline_work.pipelines_creator|in user code:
+
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1284, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\training.py", line 1050, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Иван\PycharmProjects\service_time_series_model_creator\venv\lib\site-packages\keras\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "KerasDenseModel" is incompatible with the layer: expected shape=(None, 100, 4), found shape=(None, 100, 5)
+
+2023-05-15 10:23:59,250|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:24:06,070|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.982549599953927
+2023-05-15 10:24:24,332|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:25:27,282|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:28:00,297|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:29:51,019|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:29:52,661|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:29:52,661|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:31:39,399|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:31:41,072|CRITICAL|app.scripts.pipeline_work.pipelines_creator|Произошла ошибка при создании множества Pipeline-ов
+2023-05-15 10:31:41,072|ERROR|app.scripts.pipeline_work.pipelines_creator|['PARAM_1'] is not in list
+2023-05-15 10:32:29,620|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:33:18,631|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:33:25,233|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.8271636998979375
+2023-05-15 10:33:32,431|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.03647460008505732
+2023-05-15 10:40:03,712|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:40:10,559|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.061686999979429
+2023-05-15 10:40:23,431|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.024037200026214123
+2023-05-15 10:40:25,768|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.0046304999850690365
+2023-05-15 10:42:17,573|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 10:42:24,157|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.731473900028504
+2023-05-15 12:06:05,944|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 12:06:12,758|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.179048300022259
+2023-05-15 12:06:49,734|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.02799650002270937
+2023-05-15 12:07:54,823|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-15 12:08:01,132|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.460083700018004
+2023-05-16 20:35:11,794|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-16 20:35:18,607|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.034377200000108
+2023-05-16 20:35:57,594|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-16 20:36:03,790|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.33405619999985
+2023-05-16 20:36:51,643|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2']
+2023-05-16 20:36:57,679|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 6.174460199999885

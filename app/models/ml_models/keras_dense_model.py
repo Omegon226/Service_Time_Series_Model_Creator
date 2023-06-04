@@ -79,7 +79,11 @@ class KerasDenseModel(MLModelBase):
         x = np.squeeze(x)
         y = sliding_window_view(data.values[self.horizon_for_prediction:],
                                 window_shape=(self.horizon_of_prediction, data.shape[1]))
-        y = np.squeeze(y)[:, :, columns.index(self.param_for_prediction)]
+
+        if type(self.param_for_prediction) is str:
+            y = np.squeeze(y)[:, :, columns.index(self.param_for_prediction)]
+        elif type(self.param_for_prediction) is list:
+            y = np.squeeze(y)[:, :, columns.index(self.param_for_prediction[0])]
 
         test_size = int(x.shape[0] * test_split)
 
@@ -120,7 +124,10 @@ class KerasDenseModel(MLModelBase):
         plt.rcParams['figure.figsize'] = [7, 6]
         plt.rcParams['figure.autolayout'] = True
         fig = plt.figure()
-        plt.plot(x_1, data.values[:, columns.index(self.param_for_prediction)])
+        if type(self.param_for_prediction) is str:
+            plt.plot(x_1, data.values[:, columns.index(self.param_for_prediction)])
+        elif type(self.param_for_prediction) is list:
+            plt.plot(x_1, data.values[:, columns.index(self.param_for_prediction[0])])
         plt.plot(x_2, result.reshape(-1))
         img_buf = io.BytesIO()
         plt.savefig(img_buf, format='png')
