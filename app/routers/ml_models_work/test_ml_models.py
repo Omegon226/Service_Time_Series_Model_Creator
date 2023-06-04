@@ -45,3 +45,9 @@ async def test_save_dense_model():
 async def test_load_dense_model():
     model = TesterMlModels.load_dense_model()
     return {"result_loaded_model": str(model.keras_model)}
+
+
+@router_test_ml_models_test.get("/test_get_params_for_construction_dense_model/")
+async def test_get_params_for_construction_dense_model():
+    params = TesterMlModels.get_params_for_construction_dense_model()
+    return {"result_loaded_model": params}

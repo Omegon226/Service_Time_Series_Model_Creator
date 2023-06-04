@@ -154,3 +154,10 @@ class KerasDenseModel(MLModelBase):
             keras_dense_model = dill.load(file)
         keras_dense_model.keras_model = keras.models.load_model(os.path.join(path, name+".keras"))
         return keras_dense_model
+
+    @staticmethod
+    def get_params_for_construction():
+        return {"hidden_layers_size": "list", "hidden_layers_activation": "list", "amount_of_params": "int",
+                "horizon_for_prediction": "int", "horizon_of_prediction": "int", "param_for_prediction": "str",
+                "loss": "str", "optimizer": "str", "metrics": "str", "name": "str", "epochs": "int",
+                "validation_split": "float", "test_split": "float"}

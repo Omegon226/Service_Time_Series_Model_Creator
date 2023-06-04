@@ -112,3 +112,19 @@ class TesterMlModels:
         except Exception as error:
             error_message: str = "Произошла ошибка при загрузке KerasDenseModel"
             raise http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def get_params_for_construction_dense_model():
+        try:
+            timer_start: float = perf_counter()
+
+            model: MLModelBase = KerasDenseModel([100, 200], ["relu", "relu"], 5, 100, 10, "PARAM_1")
+            params: dict = model.get_params_for_construction()
+
+            timer_end: float = perf_counter()
+            logger.info(f"Получение параметров для ML модели прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+            return params
+        except Exception as error:
+            error_message: str = "Произошла ошибка при загрузке KerasDenseModel"
+            raise http_error(error_message, error, logger=logger)
