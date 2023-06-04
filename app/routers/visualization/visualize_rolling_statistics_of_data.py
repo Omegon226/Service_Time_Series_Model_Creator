@@ -16,7 +16,9 @@ async def create_rolling_statistics_of_selected_data(background_tasks: Backgroun
     img = VisualiserRollingStatisticsOfData.create_rolling_statistics_img(
         app.service_global_variables.data.time_series_work,
         window_size=request.window_size,
-        params_for_analyze=request.params_for_analyze)
+        fig_weights=request.fig_weights,
+        fig_height=request.fig_height,
+        params=request.params)
     background_tasks.add_task(img.close)
     headers = {'Content-Disposition': 'inline; filename="out.png"'}
     return Response(img.getvalue(), headers=headers, media_type='image/png')

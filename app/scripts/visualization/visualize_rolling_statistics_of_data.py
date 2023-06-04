@@ -77,8 +77,9 @@ class VisualiserRollingStatisticsOfData:
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_rolling_statistics_img(time_series_df: TimeSeriesDF, window_size: int, params_for_analyze: str | list):
-        logger.info(f"Происходит создание визуализации статистики параметра {params_for_analyze} (rolling_statistics)")
+    def create_rolling_statistics_img(time_series_df: TimeSeriesDF, window_size: int, fig_weights: float = 15.,
+                                      fig_height: float = 10.,  params: list | None = None):
+        logger.info(f"Происходит создание визуализации статистики параметра {params} (rolling_statistics)")
         try:
             timer_start: float = perf_counter()
 
@@ -86,19 +87,19 @@ class VisualiserRollingStatisticsOfData:
                 error_message = "Для создания визуализации движущегося среднего (rolling_statistics) нужно знать главный параметр"
                 raise Exception(error_message)
 
-            plt.rcParams['figure.figsize'] = [15, 10]
+            plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
             fig, ax = plt.subplots(2, 1)
 
-            rolling_mean = time_series_df.df_work[params_for_analyze].rolling(window=window_size).mean()
+            rolling_mean = time_series_df.df_work[params].rolling(window=window_size).mean()
             #rolling_mean = rolling_mean.fillna(rolling_mean.mean())
-            rolling_median = time_series_df.df_work[params_for_analyze].rolling(window=window_size).median()
+            rolling_median = time_series_df.df_work[params].rolling(window=window_size).median()
             #rolling_median = rolling_median.fillna(value=rolling_median.mean())
-            rolling_std = time_series_df.df_work[params_for_analyze].rolling(window=window_size).std()
+            rolling_std = time_series_df.df_work[params].rolling(window=window_size).std()
             #rolling_std = rolling_std.fillna(value=rolling_std.mean())
-            rolling_min = time_series_df.df_work[params_for_analyze].rolling(window=window_size).min()
+            rolling_min = time_series_df.df_work[params].rolling(window=window_size).min()
             #rolling_min = rolling_min.fillna(value=rolling_min.mean())
-            rolling_max = time_series_df.df_work[params_for_analyze].rolling(window=window_size).max()
+            rolling_max = time_series_df.df_work[params].rolling(window=window_size).max()
             #rolling_max = rolling_max.fillna(value=rolling_max.mean())
             rolling_range = rolling_max - rolling_min
             #rolling_range = rolling_range.fillna(value=rolling_range.mean())
@@ -113,8 +114,8 @@ class VisualiserRollingStatisticsOfData:
             ax[0].legend()
             ax[1].legend()
 
-            ax[0].set_title(f"Движущиеся среднее арифм., медиана, минимум и максимум параметра/ов: {params_for_analyze}")
-            ax[1].set_title(f"Движущиеся размах, стандартное отклонение параметра/ов: {params_for_analyze}")
+            ax[0].set_title(f"Движущиеся среднее арифм., медиана, минимум и максимум параметра/ов: {params}")
+            ax[1].set_title(f"Движущиеся размах, стандартное отклонение параметра/ов: {params}")
 
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
@@ -126,5 +127,5 @@ class VisualiserRollingStatisticsOfData:
 
             return img_buf
         except Exception as error:
-            error_message: str = f"Входе создании визуализации (rolling_statistics) для параметра/ов {params_for_analyze} произошла ошибка"
+            error_message: str = f"Входе создании визуализации (rolling_statistics) для параметра/ов {params} произошла ошибка"
             http_error(error_message, error, logger=logger)

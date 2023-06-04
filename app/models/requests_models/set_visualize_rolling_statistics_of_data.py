@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
+from app.models.requests_models.set_visualization_base import SetVisualizeBase
 
-class SetVisualizeRollingStatisticsOfData(BaseModel):
+
+class SetVisualizeRollingStatisticsOfData(SetVisualizeBase):
     window_size: int = 5
-    params_for_analyze: str | list = "PARAM_1"

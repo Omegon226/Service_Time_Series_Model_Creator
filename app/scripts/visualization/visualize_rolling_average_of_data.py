@@ -67,7 +67,8 @@ class VisualiserRollingAverageOfData:
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_rolling_average_main_param_img(time_series_df: TimeSeriesDF, window_size: int):
+    def create_rolling_average_main_param_img(time_series_df: TimeSeriesDF, window_size: int, fig_weights: float = 15.,
+                                              fig_height: float = 5.):
         logger.info(f"Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра")
         try:
             timer_start: float = perf_counter()
@@ -76,7 +77,7 @@ class VisualiserRollingAverageOfData:
                 error_message = "Для создания визуализации движущегося среднего (rolling_average) нужно знать главный параметр"
                 raise Exception(error_message)
 
-            plt.rcParams['figure.figsize'] = [15, 5]
+            plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
 

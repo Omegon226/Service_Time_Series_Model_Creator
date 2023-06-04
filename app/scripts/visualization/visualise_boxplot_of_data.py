@@ -50,15 +50,19 @@ class VisualiserBoxplotOfData:
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_boxplot_img(time_series_df: TimeSeriesDF):
+    def create_boxplot_img(time_series_df: TimeSeriesDF, fig_weights: float = 15., fig_height: float = 5.,
+                           params: list | None = None):
         logger.info(f"Происходит создание визуализации всех временных рядов (boxplot)")
         try:
             timer_start: float = perf_counter()
 
-            plt.rcParams['figure.figsize'] = [15, 5]
+            plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
             fig = plt.figure()
-            sns.boxplot(data=time_series_df.df_work)
+            if params is None:
+                sns.boxplot(data=time_series_df.df_work)
+            else:
+                sns.boxplot(data=time_series_df.df_work[params])
             plt.title("Визуализация временных рядов")
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')

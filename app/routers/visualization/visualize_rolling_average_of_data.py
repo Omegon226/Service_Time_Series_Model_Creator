@@ -15,7 +15,9 @@ async def create_rolling_average_of_selected_data(background_tasks: BackgroundTa
                                                   request: SetVisualizeRollingAverageOfData):
     img = VisualiserRollingAverageOfData.create_rolling_average_main_param_img(
         app.service_global_variables.data.time_series_work,
-        window_size=request.window_size)
+        window_size=request.window_size,
+        fig_weights=request.fig_weights,
+        fig_height=request.fig_height)
     background_tasks.add_task(img.close)
     headers = {'Content-Disposition': 'inline; filename="out.png"'}
     return Response(img.getvalue(), headers=headers, media_type='image/png')
