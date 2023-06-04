@@ -19,3 +19,8 @@ class MLModelBase(ABC):
     @abstractmethod
     def load(path: str, name: str):
         pass
+
+    @staticmethod
+    @abstractmethod
+    def get_params_for_construction():
+        pass
