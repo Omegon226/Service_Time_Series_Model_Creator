@@ -16,7 +16,7 @@ async def set_param(request: SetDataMainParamRequest):
                                                       parameter_to_set_main=request.parameter_to_set_main)
 
     app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"main_parameter": app.service_global_variables.data.time_series_work.main_parameter}
 
 
 @router_data_change_main_param_test.get("/test_check_time_series_work_df/")

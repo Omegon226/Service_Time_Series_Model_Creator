@@ -12,12 +12,13 @@ router_data_delete_nan_test = APIRouter(prefix="/test_data_delete_nan")
 
 
 @router_data_delete_nan.post("/delete_nan/")
-async def delete_nan(request: SetDataDeleteNan):
+async def delete_nan():
     result = DeleterOfNanValues.delete_nan_values(app.service_global_variables.data.time_series_work)
 
     app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!",
-            "nan count": str(app.service_global_variables.data.time_series_work.df_work.isna().sum().sum())}
+    return {"columns": result.df_work.columns.tolist(),
+            "values": result.df_work.values.tolist(),
+            "nan_count": str(result.df_work.isna().sum().sum())}
 
 
 @router_data_delete_nan.post("/change_nan/")
@@ -27,8 +28,9 @@ async def change_nan(request: SetDataChangeNan):
                                                   window_size=request.window_size)
 
     app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!",
-            "nan count": str(app.service_global_variables.data.time_series_work.df_work.isna().sum().sum())}
+    return {"columns": result.df_work.columns.tolist(),
+            "values": result.df_work.values.tolist(),
+            "nan_count": str(result.df_work.isna().sum().sum())}
 
 
 @router_data_delete_nan_test.get("/test_check_time_series_work_df/")

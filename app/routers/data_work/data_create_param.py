@@ -17,8 +17,9 @@ async def create_new_param(request: SetDataCreateNewParam):
                                              name_of_new_param=request.name_of_new_param,
                                              window_size=request.window_size)
 
-    app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!"}
+    app.service_global_variables.data.time_series_work = result.df_work
+    return {"name_of_new_param": result.df_work.iloc[:, -1].name,
+            "data_of_new_param": result.df_work.iloc[:, -1].values.tolist()}
 
 
 @router_data_create_param_test.get("/test_check_time_series_work_df/")

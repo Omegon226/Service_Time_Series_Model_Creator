@@ -22,7 +22,6 @@ logger.addHandler(console_handler)
 
 
 class DataCreatorParam:
-
     @staticmethod
     def add_new_column(time_series_df: TimeSeriesDF, type_of_param: str, name_of_new_param: str | None,
                        window_size: int):

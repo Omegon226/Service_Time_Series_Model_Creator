@@ -12,11 +12,29 @@ router_data_manipulation = APIRouter(prefix="/data_manipulation")
 router_data_manipulation_test = APIRouter(prefix="/test_data_manipulation")
 
 
+@router_data_manipulation.post("/get_all_params_of_time_series/")
+async def get_all_params_of_time_series():
+    params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
+    return {"all_params": params}
+
+
+@router_data_manipulation.post("/get_main_param_of_time_series/")
+async def get_all_params_of_time_series():
+    params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
+    return {"all_params": params}
+
+
+@router_data_manipulation.post("/get_data_params_of_time_series/")
+async def get_all_params_of_time_series():
+    params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
+    return {"all_params": params}
+
+
 @router_data_manipulation.post("/get_statistics_of_time_series/")
 async def get_statistics_of_time_series(request: SetDataStatisticsOfDf):
-    result = DataManipulator.get_statistics_of_time_series(app.service_global_variables.data.time_series_work)
-    return {"result": "Запрос был выполнен успешно!",
-            "statistics": str(result)}
+    result = DataManipulator.get_statistics_of_time_series(app.service_global_variables.data.time_series_work,
+                                                           params_statistics=request.params_statistics)
+    return {"statistics": result}
 
 
 @router_data_manipulation.post("/drop_columns/")
@@ -25,7 +43,9 @@ async def drop_columns(request: SetDataDropColumns):
                                           columns_to_drop=request.columns_to_drop)
 
     app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"dropped_columns": request.columns_to_drop,
+            "columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.df_work.values.tolist()}
 
 
 @router_data_manipulation.post("/change_data_params/")
@@ -34,7 +54,7 @@ async def change_data_params(request: SetDataChangeDataParams):
                                                 new_data_params=request.new_data_params)
 
     app.service_global_variables.data.time_series_work = result
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"new_data_params": request.new_data_params}
 
 
 @router_data_manipulation_test.get("/test_check_time_series_work_df/")

@@ -20,14 +20,16 @@ async def set_data_from_csv(request: SetDataFromCSVRequest):
                                            decimal=request.decimal,
                                            encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
 
 
 @router_data_import.post("/set_data_from_dict/")
 async def set_data_from_dict(request: SetDataFromDictRequest):
     result = Importer.import_data_from_dict(data=request.data)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
 
 
 @router_data_import.post("/set_data_from_json/")
@@ -35,7 +37,8 @@ async def set_data_from_json(request: SetDataFromJSONRequest):
     result = Importer.import_data_from_json(full_path=request.full_path,
                                             encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
 
 
 @router_data_import.post("/set_data_from_csv_file/")
@@ -46,7 +49,8 @@ async def set_data_from_csv_file(request: SetDataFromCSVFileRequest = Depends(),
                                                          decimal=request.decimal,
                                                          encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
 
 
 @router_data_import.post("/set_data_from_json_file/")
@@ -55,7 +59,8 @@ async def set_data_from_json_file(request: SetDataFromJSONFileRequest = Depends(
     result = Importer.import_data_from_uploaded_json_file(file=file.file,
                                                           encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
-    return {"result": "Запрос был выполнен успешно!"}
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
 
 
 @router_data_import_test.get("/test_check_time_series_work_df/")

@@ -23,12 +23,29 @@ logger.addHandler(console_handler)
 
 class DataManipulator:
     @staticmethod
-    def get_statistics_of_time_series(time_series_df: TimeSeriesDF):
+    def get_all_params(time_series_df: TimeSeriesDF):
+        logger.info(f"Получение всех парамтеров временного ряда")
+
+        try:
+            timer_start: float = perf_counter()
+            params = time_series_df.df_work.columns.tolist()
+            timer_end: float = perf_counter()
+
+            logger.info(f"Получение всех парамтеров прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+            logger.debug(f"params: {params}")
+            return params
+        except Exception as error:
+            error_message: str = f"Произошла ошибка при получение всех парамтеров временного ряда"
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def get_statistics_of_time_series(time_series_df: TimeSeriesDF, params_statistics: list | str):
         logger.info(f"Получение статистических данных о временном ряде")
 
         try:
             timer_start: float = perf_counter()
-            description = time_series_df.df_work.describe().to_dict()
+            description = time_series_df.df_work[params_statistics].describe().to_dict()
             timer_end: float = perf_counter()
 
             logger.info(f"Статистика о временных рядах получена успешно! "
@@ -70,8 +87,8 @@ class DataManipulator:
         logger.info(f"Установка параметров: {new_data_params}, как данные для создания новых параметров")
 
         try:
-            if not set(time_series_df.df_work.columns).issubset(new_data_params):
-                raise Exception("Не хватает какого то параметра в данных")
+            if not set(new_data_params).issubset(time_series_df.df_work.columns):
+                raise Exception(f"Не хватает параметров: {set(new_data_params) - set(time_series_df.df_work.columns)}")
 
             timer_start: float = perf_counter()
             time_series_df.data_params = new_data_params
