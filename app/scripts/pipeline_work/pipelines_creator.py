@@ -45,16 +45,17 @@ class PipelineCreator:
             app.service_global_variables.pipelines.pipelines = []
 
             for i in range(len(request_data.scalers)):
-                for j in range(len(request_data.ml_models.keys())):
+                for j in request_data.ml_models.keys():
+                    request_data.ml_models[j]["param_for_prediction"] = time_series_df.main_parameter
                     combinations += [(request_data.scalers[i],
-                                      request_data.ml_models[list(request_data.ml_models.keys())[j]] +
-                                      [time_series_df.main_parameter])]
-                    name_of_combination += [request_data.scalers[i] + "_" + list(request_data.ml_models.keys())[j]]
+                                      request_data.ml_models[j])]
+                    name_of_combination += [request_data.scalers[i] + "_" + j]
 
             for i in range(len(combinations)):
                 column_transformer = ColumnTransformer(time_series_df)
                 scaler = app.service_global_variables.pipelines.all_scalers[combinations[i][0]]()
-                model = app.service_global_variables.pipelines.all_ml_models[combinations[i][1][0]](*combinations[i][1][1:])
+                model = app.service_global_variables.pipelines.all_ml_models[combinations[i][1]["model"]](
+                    **combinations[i][1])
 
                 app.service_global_variables.pipelines.pipelines += [Pipeline(column_transformer, scaler, model)]
 
