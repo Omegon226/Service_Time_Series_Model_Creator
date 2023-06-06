@@ -23,6 +23,7 @@ from routers.ml_models_work.test_ml_models import router_test_ml_models_test
 from routers.pipeline_work.test_create_pipeline import router_test_create_pipeline_test
 from routers.tests_work.test_tests import router_test_tests_test
 from routers.pipeline_work.pipelines_creator import router_pipelines_creator, router_pipelines_creator_test
+from routers.pipeline_work.information_for_creation import router_information_for_creation, router_information_for_creation_test
 
 
 # Создание приложения FastAPI
@@ -136,6 +137,11 @@ def main():
     app.include_router(router_pipelines_creator)
     app.include_router(router_pipelines_creator_test) if TEST_MODE else None
     logger.info("Роутер для создания Пайплайнов в сервис успешно подключён!")
+
+    logger.info("Идёт подключение роутера для получения информации, чтобы создавать Пайплайны")
+    app.include_router(router_information_for_creation)
+    app.include_router(router_information_for_creation_test) if TEST_MODE else None
+    logger.info("Роутердля получения информации, чтобы создавать Пайплайны в сервис успешно подключён!")
 
     logger.info("Все роутеры были успешно подключены!")
 

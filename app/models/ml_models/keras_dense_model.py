@@ -156,7 +156,7 @@ class KerasDenseModel(MLModelBase):
         return keras_dense_model
 
     @staticmethod
-    def get_params_for_construction():
+    def get_params_for_construction() -> dict | list:
         return {"hidden_layers_size": "list", "hidden_layers_activation": "list", "amount_of_params": "int",
                 "horizon_for_prediction": "int", "horizon_of_prediction": "int", "param_for_prediction": "str",
                 "loss": "str", "optimizer": "str", "metrics": "str", "name": "str", "epochs": "int",

@@ -23,4 +23,4 @@ class MLModelBase(ABC):
     @staticmethod
     @abstractmethod
     def get_params_for_construction():
-        pass
+        return MLModelBase.__init__.__code__.co_varnames

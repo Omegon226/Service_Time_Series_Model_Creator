@@ -54,7 +54,7 @@ class PipelineCreator:
             for i in range(len(combinations)):
                 column_transformer = ColumnTransformer(time_series_df)
                 scaler = app.service_global_variables.pipelines.all_scalers[combinations[i][0]]()
-                model = app.service_global_variables.pipelines.all_models[combinations[i][1][0]](*combinations[i][1][1:])
+                model = app.service_global_variables.pipelines.all_ml_models[combinations[i][1][0]](*combinations[i][1][1:])
 
                 app.service_global_variables.pipelines.pipelines += [Pipeline(column_transformer, scaler, model)]
 

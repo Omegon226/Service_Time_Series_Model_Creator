@@ -17,5 +17,5 @@ pipelines: list = []
 # Здесь хранятся все доступные для использования скейлеры, модели и методы тестирования
 
 all_scalers = {"max_abs_scaler": MaxAbsScaler, "min_max_scaler": MinMaxScaler, "standard_scaler": StandardScaler}
-all_models = {"keras_dense": KerasDenseModel}
+all_ml_models = {"keras_dense": KerasDenseModel}
 all_tests = {"mse": MSETest, "rmse": RMSETest, "r2": R2Test, "mae": MAETest}
