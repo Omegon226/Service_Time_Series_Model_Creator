@@ -1,4 +1,5 @@
 import dill
+import numpy as np
 import pandas as pd
 import os
 
@@ -16,25 +17,31 @@ class Pipeline:
     def fit(self, data, **kwargs):
         data = self.__check_and_transform_data(data)
 
-        columns = data.columns
         self.scaler.fit(data)
-        data = self.scaler.transform(data)
-        data = pd.DataFrame(data, columns=columns)
+        data_scaled = self.scaler.transform(data)
+        data_scaled = pd.DataFrame(data_scaled, columns=data.columns)
 
         if "tests" in kwargs.keys():
-            plot, tests = self.ml_model.fit(data, return_plot=True, **kwargs)
+            plot, tests = self.ml_model.fit(data_scaled, return_plot=True, **kwargs)
             return plot, tests
         else:
-            plot = self.ml_model.fit(data, return_plot=True, **kwargs)
+            plot = self.ml_model.fit(data_scaled, return_plot=True, **kwargs)
             return plot
 
     def predict(self, data):
         data = self.__check_and_transform_data(data)
 
         columns = data.columns
-        data = self.scaler.transform(data)
+        data_scaled = self.scaler.transform(data)
 
-        result = self.ml_model.predict(data)
+        prediction = self.ml_model.predict(data_scaled)
+
+        param_for_prediction = self.ml_model.param_for_prediction
+        data_for_inverse_transform = np.random.rand(prediction.shape[1], columns.shape[0])
+        data_for_inverse_transform = pd.DataFrame(data_for_inverse_transform, columns=columns)
+        data_for_inverse_transform[param_for_prediction] = prediction.reshape(-1)
+        result = self.scaler.inverse_transform(data_for_inverse_transform)[:,
+                                                                           columns.tolist().index(param_for_prediction)]
 
         return result
 

@@ -14,6 +14,9 @@ class MinMaxScaler(ScalerBase):
     def transform(self, data):
         return self.scikit_learn_scaler.transform(data)
 
+    def inverse_transform(self, data):
+        return self.scikit_learn_scaler.inverse_transform(data)
+
     def save(self, path: str = "app/resources/testing_scalers", name: str = "min_max_scaler"):
         with open(os.path.join(path, name+".dill"), 'wb+') as file:
             dill.dump(self, file)

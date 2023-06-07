@@ -12,6 +12,10 @@ class ScalerBase(ABC):
         pass
 
     @abstractmethod
+    def inverse_transform(self, data):
+        pass
+
+    @abstractmethod
     def save(self, path: str, name: str):
         pass
 
