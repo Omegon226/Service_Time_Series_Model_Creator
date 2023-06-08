@@ -151,16 +151,19 @@ def redirect_to_swagger_docs():
     return RedirectResponse("/docs")
 
 
+@app.on_event("startup")
+async def startup_event() -> None:
+    main()
+
+
 if __name__ == "__main__":
     # При запуске через отладчик PyCharm (и др. IDE) или через консоль файла main.py
     logger.info("Произведён запуск сервиса через отладчик или через обращение к файлу main.py")
-    main()
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
 else:
     # При запуске через команду Uvicorn (пример: python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000)
     logger.info("Произведён запуск сервиса через команду python -m uvicorn")
-    main()
 
 
 
