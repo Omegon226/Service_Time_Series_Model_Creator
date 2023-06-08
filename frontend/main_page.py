@@ -1,4 +1,5 @@
 import streamlit as st
+from io import StringIO
 import json
 import pandas as pd
 
@@ -12,10 +13,20 @@ tab_import_csv, tab_import_json, tab_import_dict, tab_data_table = \
 with tab_import_csv:
     st.header("Import your CSV file here")
     uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
+    bytes_data = uploaded_file.read()
+    s = str(bytes_data, 'utf-8')
+    data = StringIO(s)
+    df = pd.read_csv(data)
+
+    #if st.button('Create DataFrame'):
+    #    pass
 
 with tab_import_json:
     st.header("Import your JSON file here")
     uploaded_file = st.file_uploader("Choose a JSON file", accept_multiple_files=False)
+
+    #if st.button('Create DataFrame'):
+    #    pass
 
 with tab_import_dict:
     st.header("Import your Data in Dict format here")
