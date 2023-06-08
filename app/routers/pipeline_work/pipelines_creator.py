@@ -17,8 +17,8 @@ async def test_create_pipelines(request: SetPipelineCreationData):
 
 
 @router_pipelines_creator.post("/get_best_pipelines/")
-async def get_best_pipelines(amount: int = 2):
-    result = PipelineCreator.get_best_pipelines(amount)
+async def get_best_pipelines(amount: int = 2, nom_of_pipeline_creation: int = 1):
+    result = PipelineCreator.get_best_pipelines(amount, nom_of_pipeline_creation)
     return {"best_pipelines_by_metric": result}
 
 

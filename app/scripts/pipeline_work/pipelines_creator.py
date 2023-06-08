@@ -66,12 +66,20 @@ class PipelineCreator:
             counter = 0
             logger.info(name_of_combination)
 
-            for files in os.listdir(r"app/resources/results_of_pipeline_creation/pipelines"):
-                path = os.path.join(r"app/resources/results_of_pipeline_creation/pipelines", files)
-                shutil.rmtree(path)
-            for files in os.listdir(r"app/resources/results_of_pipeline_creation/test_results"):
-                path = os.path.join(r"app/resources/results_of_pipeline_creation/test_results", files)
-                shutil.rmtree(path)
+            #for files in os.listdir(r"app/resources/results_of_pipeline_creation/pipelines"):
+            #    path = os.path.join(r"app/resources/results_of_pipeline_creation/pipelines", files)
+            #    shutil.rmtree(path)
+            #for files in os.listdir(r"app/resources/results_of_pipeline_creation/test_results"):
+            #    path = os.path.join(r"app/resources/results_of_pipeline_creation/test_results", files)
+            #    shutil.rmtree(path)
+
+            nom_of_pipeline_creation = 1
+            dirs_of_pipeline_creation = os.listdir("app/resources/results_of_pipeline_creation")
+            if len(dirs_of_pipeline_creation) > 0:
+                nom_of_pipeline_creation = int(max(dirs_of_pipeline_creation)) + 1
+            os.mkdir(f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}")
+            os.mkdir(f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}/test_results")
+            os.mkdir(f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}/pipelines")
 
             for pipeline in app.service_global_variables.pipelines.pipelines:
                 plot, metrics = pipeline.fit(time_series_df, tests=tests)
@@ -81,9 +89,10 @@ class PipelineCreator:
                 PipelineCreator.__save_metrics(
                     plot=plot,
                     metrics=metrics,
-                    path=os.path.join(r"app/resources/results_of_pipeline_creation/test_results", f"{name_of_combination[counter]}")
+                    path=os.path.join(f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}/test_results",
+                                      f"{name_of_combination[counter]}")
                 )
-                pipeline.save(path=r"app/resources/results_of_pipeline_creation/pipelines",
+                pipeline.save(path=f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}/pipelines",
                               name=f"{name_of_combination[counter]}")
                 counter += 1
 
@@ -105,12 +114,12 @@ class PipelineCreator:
             file.write(plot.read())
 
     @staticmethod
-    def get_best_pipelines(amount: int):
+    def get_best_pipelines(amount: int, nom_of_pipeline_creation: int):
         try:
             timer_start: float = perf_counter()
 
             metrics = {}
-            path_to_result_models = r"app/resources/results_of_pipeline_creation/test_results"
+            path_to_result_models = f"app/resources/results_of_pipeline_creation/{nom_of_pipeline_creation}/test_results"
             for dir_of_model in os.listdir(path_to_result_models):
                 with open(os.path.join(path_to_result_models, dir_of_model, 'metrics.yaml'), 'r+') as file:
                     metrics[dir_of_model] = yaml.load(file, Loader=yaml.loader.SafeLoader)
