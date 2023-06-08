@@ -17,3 +17,4 @@
 2023-05-15 10:38:27,090|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
 2023-05-15 12:02:11,591|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
 2023-05-15 12:02:12,790|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-05 19:09:35,409|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
