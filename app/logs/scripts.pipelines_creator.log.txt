@@ -203,3 +203,55 @@
 2023-06-08 16:36:33,717|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_keras_dense_1', 'min_max_scaler_keras_dense_2', 'min_max_scaler_keras_rnn', 'min_max_scaler_keras_gru', 'min_max_scaler_keras_lstm', 'max_abs_scaler_keras_dense_1', 'max_abs_scaler_keras_dense_2', 'max_abs_scaler_keras_rnn', 'max_abs_scaler_keras_gru', 'max_abs_scaler_keras_lstm']
 2023-06-08 16:37:07,761|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 35.16863430000376
 2023-06-08 16:37:29,761|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.012196699972264469
+2023-06-09 19:33:18,842|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_model_1', 'min_max_scaler_model_2']
+2023-06-09 19:33:27,185|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 8.975781300105155
+2023-06-09 19:35:23,729|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_model_1', 'min_max_scaler_model_2']
+2023-06-09 19:35:31,420|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.910829900065437
+2023-06-09 19:37:09,106|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_model_1', 'min_max_scaler_model_2']
+2023-06-09 19:37:16,401|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 7.518195300013758
+2023-06-09 19:45:46,004|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00020849995780736208
+2023-06-09 19:50:22,203|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00019809999503195286
+2023-06-09 19:50:25,324|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00020490004681050777
+2023-06-09 19:50:26,159|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00018450000789016485
+2023-06-09 19:50:47,472|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.038834900013171136
+2023-06-09 19:50:56,555|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.013925999985076487
+2023-06-09 19:56:05,373|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00021440000273287296
+2023-06-09 19:56:07,331|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0001976999919861555
+2023-06-09 19:56:07,343|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.005836000083945692
+2023-06-09 19:56:23,210|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00020540005061775446
+2023-06-09 19:56:23,211|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00013920001219958067
+2023-06-09 19:56:31,356|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00025120005011558533
+2023-06-09 19:56:33,880|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00019339995924383402
+2023-06-09 19:56:35,720|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.005638599977828562
+2023-06-09 19:56:48,588|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00018089998047798872
+2023-06-09 19:56:50,821|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0002750999992713332
+2023-06-09 19:56:50,825|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00025310006458312273
+2023-06-09 19:56:51,584|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00021500000730156898
+2023-06-09 19:56:52,673|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0002272999845445156
+2023-06-09 19:56:52,684|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.005473400000482798
+2023-06-09 19:56:57,748|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00020070001482963562
+2023-06-09 19:56:58,069|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00019480008631944656
+2023-06-09 19:56:58,303|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00014999997802078724
+2023-06-09 19:56:59,891|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0001981999957934022
+2023-06-09 19:57:00,017|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00019269995391368866
+2023-06-09 19:57:00,027|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.0038178000831976533
+2023-06-09 19:57:25,090|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0002033999189734459
+2023-06-09 19:57:26,589|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00018209998961538076
+2023-06-09 19:57:26,600|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.005627400008961558
+2023-06-09 19:57:29,003|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0001938999630510807
+2023-06-09 19:57:30,323|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0001868000254034996
+2023-06-09 19:57:30,335|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.0060044999700039625
+2023-06-09 19:57:46,192|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00018540001474320889
+2023-06-09 19:57:49,065|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00018890004139393568
+2023-06-09 19:57:52,008|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00020070001482963562
+2023-06-09 19:57:54,663|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.00019759999122470617
+2023-06-09 19:57:57,551|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 6Затрачено времени: 0.0001973999897018075
+2023-06-09 19:58:06,474|INFO|app.scripts.pipeline_work.pipelines_creator|['min_max_scaler_model_1', 'min_max_scaler_model_2', 'min_max_scaler_model_3', 'min_max_scaler_model_4', 'max_abs_scaler_model_1', 'max_abs_scaler_model_2', 'max_abs_scaler_model_3', 'max_abs_scaler_model_4', 'standard_scaler_model_1', 'standard_scaler_model_2', 'standard_scaler_model_3', 'standard_scaler_model_4']
+2023-06-09 19:58:45,176|INFO|app.scripts.pipeline_work.pipelines_creator|Создание множества Pipeline-ов прошло успешно! Затрачено времени: 39.912764100008644
+2023-06-09 19:58:45,182|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.0001783999614417553
+2023-06-09 19:59:14,585|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.00018999993335455656
+2023-06-09 19:59:15,139|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.00018850003834813833
+2023-06-09 19:59:15,594|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.00019940000493079424
+2023-06-09 19:59:21,626|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.00022209994494915009
+2023-06-09 19:59:21,743|INFO|app.scripts.pipeline_work.pipelines_creator|Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: 7Затрачено времени: 0.0003816999960690737
+2023-06-09 19:59:21,761|INFO|app.scripts.pipeline_work.pipelines_creator|Поиск лучших Pipeline-ов завершён успешно! Затрачено времени: 0.012074300087988377

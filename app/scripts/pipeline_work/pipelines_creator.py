@@ -66,13 +66,6 @@ class PipelineCreator:
             counter = 0
             logger.info(name_of_combination)
 
-            #for files in os.listdir(r"app/resources/results_of_pipeline_creation/pipelines"):
-            #    path = os.path.join(r"app/resources/results_of_pipeline_creation/pipelines", files)
-            #    shutil.rmtree(path)
-            #for files in os.listdir(r"app/resources/results_of_pipeline_creation/test_results"):
-            #    path = os.path.join(r"app/resources/results_of_pipeline_creation/test_results", files)
-            #    shutil.rmtree(path)
-
             nom_of_pipeline_creation = 1
             dirs_of_pipeline_creation = os.listdir("app/resources/results_of_pipeline_creation")
             if len(dirs_of_pipeline_creation) > 0:
@@ -114,6 +107,24 @@ class PipelineCreator:
             file.write(plot.read())
 
     @staticmethod
+    def get_amount_of_ml_pipelines_dirs():
+        try:
+            timer_start: float = perf_counter()
+
+            path_to_result_models = f"app/resources/results_of_pipeline_creation"
+            count = len(os.listdir(path_to_result_models))
+
+            timer_end: float = perf_counter()
+            logger.info(f"Расчёт кол-ва папок с результатами обучения ML Pipelin-ов: {count} "
+                        f"Затрачено времени: {timer_end - timer_start}")
+
+            return count
+
+        except Exception as error:
+            error_message: str = "Произошла ошибка при поиске кол-ва папок с результатами обучения ML Pipelin-ов"
+            raise http_error(error_message, error, logger=logger)
+
+    @staticmethod
     def get_best_pipelines(amount: int, nom_of_pipeline_creation: int):
         try:
             timer_start: float = perf_counter()
@@ -138,4 +149,3 @@ class PipelineCreator:
         except Exception as error:
             error_message: str = "Произошла ошибка при поиске Pipelin-ов"
             raise http_error(error_message, error, logger=logger)
-

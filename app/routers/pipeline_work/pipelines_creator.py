@@ -22,6 +22,12 @@ async def get_best_pipelines(amount: int = 2, nom_of_pipeline_creation: int = 1)
     return {"best_pipelines_by_metric": result}
 
 
+@router_pipelines_creator.get("/get_amount_of_ml_pipelines_dirs/")
+async def get_amount_of_ml_pipelines_dirs():
+    result = PipelineCreator.get_amount_of_ml_pipelines_dirs()
+    return {"amount_of_dirs": result}
+
+
 @router_pipelines_creator_test.post("/test_request/")
 async def test_request(request: SetPipelineCreationData):
     return {"result_scalers": request.scalers,

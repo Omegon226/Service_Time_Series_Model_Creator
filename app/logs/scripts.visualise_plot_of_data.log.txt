@@ -90,3 +90,17 @@
 2023-06-09 15:33:09,033|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 1.1381897000828758
 2023-06-09 15:35:07,710|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
 2023-06-09 15:35:08,366|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.655107400030829
+2023-06-09 18:47:19,253|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:47:19,911|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.6573501999955624
+2023-06-09 18:47:30,426|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:47:30,982|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.5554386000148952
+2023-06-09 18:47:39,761|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:47:40,303|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.5422785000409931
+2023-06-09 18:47:50,194|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:47:50,756|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.562582700047642
+2023-06-09 18:48:06,589|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:48:07,140|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.5509901000186801
+2023-06-09 18:48:16,891|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:48:17,425|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.5335090999724343
+2023-06-09 18:48:27,102|INFO|app.scripts.visualization.visualise_plot_of_data|Происходит создание визуализации всех временных рядов (plot)
+2023-06-09 18:48:27,658|INFO|app.scripts.visualization.visualise_plot_of_data|Создание визуализации (plot) прошло успешно!Затрачено времени: 0.5551527999341488
