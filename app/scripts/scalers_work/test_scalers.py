@@ -5,7 +5,7 @@ from app.scripts.http_error import http_error
 from app.models.scalers.scaler_base import ScalerBase
 from app.models.scalers.max_abs_scaler import MaxAbsScaler
 from app.models.scalers.min_max_scaler import MinMaxScaler
-from app.models.scalers.standart_scaler import StandardScaler
+from app.models.scalers.standard_scaler import StandardScaler
 from app.models.data_models.time_series_df import TimeSeriesDF
 
 # Создание логгера

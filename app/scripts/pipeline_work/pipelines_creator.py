@@ -13,7 +13,7 @@ from app.models.scalers.column_transformer import ColumnTransformer
 from app.models.scalers.scaler_base import ScalerBase
 from app.models.scalers.max_abs_scaler import MaxAbsScaler
 from app.models.scalers.min_max_scaler import MinMaxScaler
-from app.models.scalers.standart_scaler import StandardScaler
+from app.models.scalers.standard_scaler import StandardScaler
 from app.models.data_models.time_series_df import TimeSeriesDF
 from app.models.ml_models.ml_model_base import MLModelBase
 from app.models.ml_models.keras_dense_model import KerasDenseModel
