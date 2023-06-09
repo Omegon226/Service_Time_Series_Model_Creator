@@ -34,7 +34,7 @@ class VisualiserRollingAverageOfData:
 
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
             data = pd.DataFrame({"data": (np.arange(1, 100)) ** 1.2})
 
             rolling_mean = data.rolling(window=window_size).mean()
@@ -79,7 +79,7 @@ class VisualiserRollingAverageOfData:
 
             plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
 
             rolling_mean = time_series_df.df_work[time_series_df.main_parameter].rolling(window=window_size).mean()
             rolling_median = time_series_df.df_work[time_series_df.main_parameter].rolling(window=window_size).median()

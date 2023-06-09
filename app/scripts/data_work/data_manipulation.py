@@ -23,6 +23,23 @@ logger.addHandler(console_handler)
 
 class DataManipulator:
     @staticmethod
+    def get_full_data_frame(time_series_df: TimeSeriesDF):
+        logger.info(f"Получение всех данных временных рядов")
+
+        try:
+            timer_start: float = perf_counter()
+            data = time_series_df.df_work.to_dict()
+            timer_end: float = perf_counter()
+
+            logger.info(f"Получение всех данных временных рядов прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+            logger.debug(f"data: {data}")
+            return data
+        except Exception as error:
+            error_message: str = f"Произошла ошибка при получение всех данных временных рядов"
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
     def get_all_params(time_series_df: TimeSeriesDF):
         logger.info(f"Получение всех парамтеров временного ряда")
 

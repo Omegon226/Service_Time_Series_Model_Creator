@@ -34,7 +34,7 @@ class VisualiserPlotOfData:
 
             plt.rcParams['figure.figsize'] = [15, 5]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
             sns.lineplot(data=[1, 2, 3, 6, 9, 12])
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
@@ -58,7 +58,7 @@ class VisualiserPlotOfData:
 
             plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
             if params is None:
                 sns.lineplot(data=time_series_df.df_work)
             else:

@@ -32,7 +32,7 @@ class VisualiserCorrheatmapOfData:
         try:
             plt.rcParams['figure.figsize'] = [7, 6]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
             sns.heatmap(data=pd.DataFrame({1: [1, 2, 3, 6, 9, 12], 2: [1, 2, 3, 6, 9, 12]}).corr("pearson"))
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')
@@ -51,7 +51,7 @@ class VisualiserCorrheatmapOfData:
 
             plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
+            fig = plt.figure(dpi=200)
             if params is None:
                 sns.heatmap(data=time_series_df.df_work.corr(method="spearman"))
             else:
@@ -71,15 +71,19 @@ class VisualiserCorrheatmapOfData:
             http_error(error_message, error, logger=logger)
 
     @staticmethod
-    def create_corrheatmap_pearson_img(time_series_df: TimeSeriesDF):
+    def create_corrheatmap_pearson_img(time_series_df: TimeSeriesDF, fig_weights: float = 7., fig_height: float = 6.,
+                                        params: list | None = None):
         logger.info(f"Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона")
         try:
             timer_start: float = perf_counter()
 
-            plt.rcParams['figure.figsize'] = [7, 6]
+            plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
-            fig = plt.figure()
-            sns.heatmap(data=time_series_df.df_work.corr(method="pearson"))
+            fig = plt.figure(dpi=200)
+            if params is None:
+                sns.heatmap(data=time_series_df.df_work.corr(method="pearson"))
+            else:
+                sns.heatmap(data=time_series_df.df_work[params].corr(method="pearson"))
             plt.title("Визуализация временных рядов")
             img_buf = io.BytesIO()
             plt.savefig(img_buf, format='png')

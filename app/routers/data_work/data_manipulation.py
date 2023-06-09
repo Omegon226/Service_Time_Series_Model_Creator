@@ -12,22 +12,28 @@ router_data_manipulation = APIRouter(prefix="/data_manipulation")
 router_data_manipulation_test = APIRouter(prefix="/test_data_manipulation")
 
 
-@router_data_manipulation.post("/get_all_params_of_time_series/")
+@router_data_manipulation.get("/get_all_params_of_time_series/")
 async def get_all_params_of_time_series():
     params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
     return {"all_params": params}
 
 
-@router_data_manipulation.post("/get_main_param_of_time_series/")
+@router_data_manipulation.get("/get_main_param_of_time_series/")
 async def get_all_params_of_time_series():
     params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
     return {"all_params": params}
 
 
-@router_data_manipulation.post("/get_data_params_of_time_series/")
+@router_data_manipulation.get("/get_data_params_of_time_series/")
 async def get_all_params_of_time_series():
     params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
     return {"all_params": params}
+
+
+@router_data_manipulation.get("/get_all_data_frame/")
+async def get_all_data_frame():
+    data: dict = DataManipulator.get_full_data_frame(app.service_global_variables.data.time_series_work)
+    return data
 
 
 @router_data_manipulation.post("/get_statistics_of_time_series/")

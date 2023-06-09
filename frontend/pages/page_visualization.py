@@ -1,8 +1,10 @@
 import streamlit as st
+import requests
+
+from frontend.requests_for_pages.requests_visualization import RequestsVisualization
 
 
-df = None
-params_of_df = ["PARAM_1", "PARAM_2", "PARAM_3", "PARAM_4", "PARAM_5"]
+params_of_df = RequestsVisualization.request_get_all_params()
 
 
 st.title("Visualization")
@@ -18,7 +20,7 @@ with tab_timeseries_plot:
         params_of_df,
         params_of_df)
     if st.button('Create Timeseries Plot'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_plot(params_for_timeseries_plot_selected).content)
 
 with tab_histogram:
     params_for_histogram_selected = st.multiselect(
@@ -26,7 +28,7 @@ with tab_histogram:
         params_of_df,
         params_of_df)
     if st.button('Create Histogram'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_histogram(params_for_histogram_selected).content)
 
 with tab_boxplot:
     params_for_boxplot_selected = st.multiselect(
@@ -34,7 +36,7 @@ with tab_boxplot:
         params_of_df,
         params_of_df)
     if st.button('Create Boxplot'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_boxplot(params_for_boxplot_selected).content)
 
 with tab_violinplot:
     params_for_violinplot_selected = st.multiselect(
@@ -42,7 +44,7 @@ with tab_violinplot:
         params_of_df,
         params_of_df)
     if st.button('Create Violinplot'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_violinplot(params_for_violinplot_selected).content)
 
 with tab_corr_heatmap:
     correlation_option = st.selectbox(
@@ -53,20 +55,22 @@ with tab_corr_heatmap:
         params_of_df,
         params_of_df)
     if st.button('Create Correlation Heatmap'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_corr_heatmap(correlation_option,
+                                                            params_for_corr_heatmap_selected).content)
 
 with tab_rolling_average:
     window_size_rolling_average = st.number_input('Insert window size for Rolling Average',
                                                   step=1, value=15, min_value=1)
-    if st.button('Create Rolling Average'):
-        st.write('ABOBA')
-
-with tab_rolling_statistics:
-    window_size_rolling_statistics = st.number_input('Insert window size fro Rolling Statistics',
-                                                     step=1, value=15, min_value=1)
     params_for_rolling_statistics_selected = st.multiselect(
         'Set Parameters to plot Rolling Statistics',
         params_of_df,
         params_of_df)
+    if st.button('Create Rolling Average'):
+        st.image(RequestsVisualization.request_rolling_average(window_size_rolling_average,
+                                                               params_for_rolling_statistics_selected).content)
+
+with tab_rolling_statistics:
+    window_size_rolling_statistics = st.number_input('Insert window size fro Rolling Statistics',
+                                                     step=1, value=15, min_value=1)
     if st.button('Create Rolling Statistics'):
-        st.write('ABOBA')
+        st.image(RequestsVisualization.request_rolling_statistics(window_size_rolling_statistics).content)

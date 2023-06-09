@@ -34,7 +34,7 @@ class VisualiserRollingStatisticsOfData:
 
             plt.rcParams['figure.figsize'] = [15, 10]
             plt.rcParams['figure.autolayout'] = True
-            fig, ax = plt.subplots(2, 1)
+            fig, ax = plt.subplots(2, 1, dpi=200)
             data = pd.DataFrame({"data": (np.arange(1, 100)) ** 1.2})
 
             rolling_mean = data.rolling(window=window_size).mean()
@@ -89,7 +89,7 @@ class VisualiserRollingStatisticsOfData:
 
             plt.rcParams['figure.figsize'] = [fig_weights, fig_height]
             plt.rcParams['figure.autolayout'] = True
-            fig, ax = plt.subplots(2, 1)
+            fig, ax = plt.subplots(2, 1, dpi=200)
 
             rolling_mean = time_series_df.df_work[params].rolling(window=window_size).mean()
             #rolling_mean = rolling_mean.fillna(rolling_mean.mean())

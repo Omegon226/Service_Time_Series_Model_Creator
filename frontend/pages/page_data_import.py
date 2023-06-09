@@ -3,9 +3,10 @@ from io import StringIO
 import json
 import pandas as pd
 
+from frontend.requests_for_pages.requests_data_import import RequestsDataImport
+
 
 df = None
-params_of_df = ["PARAM_1", "PARAM_2", "PARAM_3", "PARAM_4", "PARAM_5"]
 
 
 st.title("Import Data")
@@ -16,7 +17,7 @@ tab_import_csv, tab_import_json, tab_import_dict, tab_data_table = \
 
 with tab_import_csv:
     st.header("Import your CSV file here")
-    uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
+    uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False, type="csv")
 
     if st.button('Create Data from CSV'):
         bytes_data = uploaded_file.read()
@@ -26,7 +27,7 @@ with tab_import_csv:
 
 with tab_import_json:
     st.header("Import your JSON file here")
-    uploaded_file = st.file_uploader("Choose a JSON file", accept_multiple_files=False)
+    uploaded_file = st.file_uploader("Choose a JSON file", accept_multiple_files=False, type="json")
 
     if st.button('Create Data from JSON'):
         bytes_data = uploaded_file.read()
@@ -42,6 +43,8 @@ with tab_import_dict:
         df = pd.DataFrame(json.loads(dict_data_str))
 
 with tab_data_table:
+    df = RequestsDataImport.request_get_df()
+
     if df is None:
         st.header("No Data to print")
     else:

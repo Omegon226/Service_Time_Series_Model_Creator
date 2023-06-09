@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import json
 
+from frontend.requests_for_pages.requests_data_work import RequestsDataWork
 
-df = pd.DataFrame(json.loads('{"a": [1, 2, 3], "b": [4, 5, 6]}'))
-params_of_df = ["PARAM_1", "PARAM_2", "PARAM_3", "PARAM_4", "PARAM_5"]
+
+df_statistics = None
+params_of_df = RequestsDataWork.request_get_all_params()
 
 
 st.title("Data Work")
@@ -44,8 +46,10 @@ with tab_delete_nan:
         st.write('ABOBA')
 
 with tab_get_statistics:
-    if df is None:
+    df_statistics = RequestsDataWork.request_get_all_params_statistics()
+
+    if df_statistics is None:
         st.header("No Data to print")
     else:
         st.header("Data Statistics")
-        st.dataframe(df.describe())
+        st.dataframe(df_statistics)

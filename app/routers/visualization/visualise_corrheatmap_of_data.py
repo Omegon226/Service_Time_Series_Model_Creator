@@ -25,9 +25,13 @@ async def create_corrheatmap_spearman_of_all_data(background_tasks: BackgroundTa
 
 
 @router_visualise_corrheatmap_of_data.post("/create_corrheatmap_pearson_of_all_data/")
-async def create_corrheatmap_pearson_of_all_data(background_tasks: BackgroundTasks):
+async def create_corrheatmap_pearson_of_all_data(background_tasks: BackgroundTasks,
+                                                  request: SetVisualizeBase):
     img = VisualiserCorrheatmapOfData.create_corrheatmap_pearson_img(
-        app.service_global_variables.data.time_series_work)
+        app.service_global_variables.data.time_series_work,
+        fig_weights=request.fig_weights,
+        fig_height=request.fig_height,
+        params=request.params)
     background_tasks.add_task(img.close)
     headers = {'Content-Disposition': 'inline; filename="out.png"'}
     return Response(img.getvalue(), headers=headers, media_type='image/png')
