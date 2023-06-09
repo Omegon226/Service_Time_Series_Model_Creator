@@ -14,4 +14,5 @@
 - TensorFlow (pip install tensorflow)
 - Dill (pip install dill)
 - PyYAML (pip install pyyaml)
-- python-multipart (pip install python-multipart)
+- Python-Multipart (pip install python-multipart)
+- Streamlit (pip install streamlit)
