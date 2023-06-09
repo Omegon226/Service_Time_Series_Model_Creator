@@ -7,4 +7,4 @@ st.markdown("""
 
 st.subheader("This layer implemented possibility for better communications users with service")
 
-st.write("© Смирнов И.М. ИГЭУ 2019-41хх")
+st.write("© Smirnov I.M. ISPU 2019-41хх")
