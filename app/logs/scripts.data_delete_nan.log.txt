@@ -105,3 +105,49 @@ PARAM_4    0
 PARAM_5    0
 dtype: int64
 2023-05-15 09:54:18,957|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'zero' Всего осталось NaN значений: 0 Затрачено времени: 0.0001221999991685152
+2023-06-09 17:07:05,047|INFO|app.scripts.data_work.data_delete_nan|Замена строчек с NaN значениями на статистические значения. Всего таких строчек: 0
+2023-06-09 17:07:05,049|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: a    0
+b    0
+dtype: int64
+2023-06-09 17:07:05,050|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 'zero' Всего осталось NaN значений: 0 Затрачено времени: 0.00011280004400759935
+2023-06-09 17:07:28,541|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-06-09 17:07:28,542|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: a    0
+b    0
+dtype: int64
+2023-06-09 17:07:28,543|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.0009170999983325601
+2023-06-09 17:25:18,293|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-06-09 17:25:18,294|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+dtype: int64
+2023-06-09 17:25:18,295|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.0007404000498354435
+2023-06-09 17:48:46,634|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-06-09 17:48:46,636|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+mean       0
+dtype: int64
+2023-06-09 17:48:46,636|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.000583800021559
+2023-06-09 17:49:43,490|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-06-09 17:49:43,491|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+mean       0
+           0
+dtype: int64
+2023-06-09 17:49:43,491|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.0005342999938875437
+2023-06-09 17:51:26,313|INFO|app.scripts.data_work.data_delete_nan|Удаление строчек с NaN значениями. Всего таких строчек: 0
+2023-06-09 17:51:26,314|DEBUG|app.scripts.data_work.data_delete_nan|Сумма NaN значений по столбцам: PARAM_1    0
+PARAM_2    0
+PARAM_3    0
+PARAM_4    0
+PARAM_5    0
+mean       0
+dtype: int64
+2023-06-09 17:51:26,315|INFO|app.scripts.data_work.data_delete_nan|В результате сброса NaN строчек было удалено строк: 0 Затрачено времени: 0.0007334999972954392

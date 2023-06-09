@@ -556,3 +556,10 @@
 0  1.0  4.0
 1  2.0  5.0
 2  3.0  6.0
+2023-06-09 16:46:47,801|INFO|app.scripts.data_work.data_import|Началась сохранение данных из dict
+2023-06-09 16:46:47,802|DEBUG|app.scripts.data_work.data_import|dict: {'a': [1.0, 2.0, 3.0], 'b': [4.0, 5.0, 6.0]}
+2023-06-09 16:46:47,803|INFO|app.scripts.data_work.data_import|Данные были преобразованы! Затраченное время: 0.0003198999911546707
+2023-06-09 16:46:47,809|DEBUG|app.scripts.data_work.data_import|Данные:      a    b
+0  1.0  4.0
+1  2.0  5.0
+2  3.0  6.0

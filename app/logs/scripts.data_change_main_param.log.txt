@@ -18,3 +18,12 @@
 2023-05-15 12:02:11,591|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
 2023-05-15 12:02:12,790|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
 2023-06-05 19:09:35,409|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 16:53:40,973|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 16:53:40,976|CRITICAL|app.scripts.data_work.data_change_main_param|В данных о временных рядах нету такого параметра: PARAM_1
+2023-06-09 16:53:45,707|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: a, как главного для временных рядов
+2023-06-09 17:21:57,016|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 17:24:05,633|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 17:24:57,633|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 17:25:00,984|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 17:26:14,113|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов
+2023-06-09 17:33:01,042|INFO|app.scripts.data_work.data_change_main_param|Установка параметра: PARAM_1, как главного для временных рядов

@@ -41,19 +41,53 @@ class DataManipulator:
 
     @staticmethod
     def get_all_params(time_series_df: TimeSeriesDF):
-        logger.info(f"Получение всех парамтеров временного ряда")
+        logger.info(f"Получение всех параметров временного ряда")
 
         try:
             timer_start: float = perf_counter()
             params = time_series_df.df_work.columns.tolist()
             timer_end: float = perf_counter()
 
-            logger.info(f"Получение всех парамтеров прошло успешно! "
+            logger.info(f"Получение всех параметров прошло успешно! "
                         f"Затрачено времени: {timer_end - timer_start}")
             logger.debug(f"params: {params}")
             return params
         except Exception as error:
-            error_message: str = f"Произошла ошибка при получение всех парамтеров временного ряда"
+            error_message: str = f"Произошла ошибка при получение всех параметров временного ряда"
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def get_main_param(time_series_df: TimeSeriesDF):
+        logger.info(f"Получение основного параметра временного ряда")
+
+        try:
+            timer_start: float = perf_counter()
+            main_parameter = time_series_df.main_parameter
+            timer_end: float = perf_counter()
+
+            logger.info(f"Получение основного параметра прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+            logger.debug(f"main_parameter: {main_parameter}")
+            return main_parameter
+        except Exception as error:
+            error_message: str = f"Произошла ошибка при получении основного параметра временного ряда"
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def get_data_params(time_series_df: TimeSeriesDF):
+        logger.info(f"Получение всех параметров для данных временного ряда")
+
+        try:
+            timer_start: float = perf_counter()
+            data_params = time_series_df.data_params
+            timer_end: float = perf_counter()
+
+            logger.info(f"Получение всех параметров для данных прошло успешно! "
+                        f"Затрачено времени: {timer_end - timer_start}")
+            logger.debug(f"params: {data_params}")
+            return data_params
+        except Exception as error:
+            error_message: str = f"Произошла ошибка при получение всех параметров для данных временного ряда"
             http_error(error_message, error, logger=logger)
 
     @staticmethod

@@ -1,5 +1,4 @@
 import streamlit as st
-import requests
 
 from frontend.requests_for_pages.requests_visualization import RequestsVisualization
 

@@ -20,14 +20,14 @@ async def get_all_params_of_time_series():
 
 @router_data_manipulation.get("/get_main_param_of_time_series/")
 async def get_all_params_of_time_series():
-    params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
-    return {"all_params": params}
+    params = DataManipulator.get_main_param(app.service_global_variables.data.time_series_work)
+    return {"main_param": params}
 
 
 @router_data_manipulation.get("/get_data_params_of_time_series/")
 async def get_all_params_of_time_series():
-    params = DataManipulator.get_all_params(app.service_global_variables.data.time_series_work)
-    return {"all_params": params}
+    params = DataManipulator.get_data_params(app.service_global_variables.data.time_series_work)
+    return {"data_params": params}
 
 
 @router_data_manipulation.get("/get_all_data_frame/")

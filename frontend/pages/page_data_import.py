@@ -1,7 +1,4 @@
 import streamlit as st
-from io import StringIO
-import json
-import pandas as pd
 
 from frontend.requests_for_pages.requests_data_import import RequestsDataImport
 

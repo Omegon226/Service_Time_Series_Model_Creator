@@ -1,6 +1,4 @@
 import streamlit as st
-import requests
-
 
 df = None
 params_of_df = ["PARAM_1", "PARAM_2", "PARAM_3", "PARAM_4", "PARAM_5"]
