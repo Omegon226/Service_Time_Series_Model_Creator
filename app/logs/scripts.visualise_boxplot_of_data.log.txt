@@ -8,3 +8,7 @@
 2023-05-15 10:39:08,374|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3706123000010848
 2023-05-15 12:04:26,284|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
 2023-05-15 12:04:26,640|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3550896999659017
+2023-06-09 11:58:22,732|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-06-09 11:58:23,084|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3424563000444323
+2023-06-09 15:35:12,778|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-06-09 15:35:13,165|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.38269879994913936

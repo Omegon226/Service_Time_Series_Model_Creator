@@ -23,3 +23,29 @@
 2023-05-15 12:04:35,245|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.44776330003514886
 2023-05-15 12:04:44,633|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
 2023-05-15 12:04:45,072|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.438712100032717
+2023-06-09 11:58:28,465|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 11:58:28,945|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.4679015000583604
+2023-06-09 11:58:35,961|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 11:58:36,412|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.4498094000155106
+2023-06-09 12:27:17,695|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 12:27:18,297|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.601604099967517
+2023-06-09 12:27:20,738|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 12:27:21,352|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.614614799967967
+2023-06-09 12:27:25,483|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 12:27:26,128|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6453685000305995
+2023-06-09 12:30:28,300|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 12:30:28,917|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6178942999104038
+2023-06-09 12:30:30,828|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 12:30:31,440|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6113951000152156
+2023-06-09 12:30:34,810|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 12:30:35,425|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6143161000218242
+2023-06-09 15:30:01,138|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 15:30:02,177|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 1.0386204000096768
+2023-06-09 15:30:07,631|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 15:30:08,678|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 1.0459766000276431
+2023-06-09 15:30:53,917|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 15:30:54,983|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 1.0653441000031307
+2023-06-09 15:35:17,009|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 15:35:17,537|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.5279390000505373
+2023-06-09 15:35:21,407|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 15:35:21,951|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.5431479999097064

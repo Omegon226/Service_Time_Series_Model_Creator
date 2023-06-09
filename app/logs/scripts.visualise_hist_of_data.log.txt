@@ -15,3 +15,29 @@
 2023-06-06 17:16:45,251|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
 2023-06-06 17:16:46,052|CRITICAL|app.scripts.visualization.visualise_hist_of_data|Входе создании визуализации (hist) произошла ошибка
 2023-06-06 17:16:46,052|ERROR|app.scripts.visualization.visualise_hist_of_data|'string'
+2023-06-09 11:58:16,034|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 11:58:21,885|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.839489200036041
+2023-06-09 12:10:14,990|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 12:10:20,708|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.7172067000065
+2023-06-09 12:27:06,323|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 12:27:12,048|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.72472659999039
+2023-06-09 12:30:09,659|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 12:30:15,421|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.7620055000297725
+2023-06-09 12:30:22,303|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 12:30:22,897|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 0.5933915000641719
+2023-06-09 13:42:42,938|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 13:42:48,741|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.802259200019762
+2023-06-09 13:43:02,153|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 13:43:08,209|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 6.055345600005239
+2023-06-09 13:43:17,330|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 13:43:22,853|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.523590600001626
+2023-06-09 15:29:45,212|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 15:29:46,325|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 1.112696100026369
+2023-06-09 15:30:58,029|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 15:30:59,362|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 1.3322355999844149
+2023-06-09 15:33:11,168|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 15:33:12,290|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 1.1218389000277966
+2023-06-09 15:33:27,282|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 15:33:28,391|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 1.108898099977523
+2023-06-09 15:35:10,885|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 15:35:11,442|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 0.555077499942854

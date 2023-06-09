@@ -10,3 +10,17 @@
 2023-05-15 12:04:09,623|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.3973715000320226
 2023-05-16 20:49:44,891|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
 2023-05-16 20:49:45,300|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.40849789999992936
+2023-06-09 11:58:08,851|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 11:58:09,265|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.4057080000638962
+2023-06-09 12:27:14,438|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 12:27:14,911|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.472836000029929
+2023-06-09 12:30:26,171|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 12:30:26,652|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.48085210006684065
+2023-06-09 15:29:51,766|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 15:29:52,515|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.7485220999224111
+2023-06-09 15:30:45,710|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 15:30:46,458|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.7474873999599367
+2023-06-09 15:31:25,352|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 15:31:26,100|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.7468136999523267
+2023-06-09 15:35:14,863|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 15:35:15,293|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.42941460001748055

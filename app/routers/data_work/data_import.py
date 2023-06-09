@@ -6,6 +6,8 @@ from app.models.requests_models.set_data_from_dict import SetDataFromDictRequest
 from app.models.requests_models.set_data_from_json import SetDataFromJSONRequest
 from app.models.requests_models.set_data_from_csv_file import SetDataFromCSVFileRequest
 from app.models.requests_models.set_data_from_json_file import SetDataFromJSONFileRequest
+from app.models.requests_models.set_data_from_csv_bytes import SetDataFromCSVBytesRequest
+from app.models.requests_models.set_data_from_json_bytes import SetDataFromJSONBytesRequest
 from app.scripts.data_work.data_import import Importer
 from app.models.data_models.time_series_df import TimeSeriesDF
 
@@ -58,6 +60,26 @@ async def set_data_from_json_file(request: SetDataFromJSONFileRequest = Depends(
                                   file: UploadFile = File(...)):
     result = Importer.import_data_from_uploaded_json_file(file=file.file,
                                                           encoding=request.encoding)
+    app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
+
+
+@router_data_import.post("/set_data_from_csv_bytes/")
+async def set_data_from_csv(request: SetDataFromCSVBytesRequest):
+    result = Importer.import_data_from_csv_bytes(bytestring=request.full_path,
+                                           sep=request.sep,
+                                           decimal=request.decimal,
+                                           encoding=request.encoding)
+    app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
+    return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
+            "values": result.values.tolist()}
+
+
+@router_data_import.post("/set_data_from_json_bytes/")
+async def set_data_from_json(request: SetDataFromJSONBytesRequest):
+    result = Importer.import_data_from_json_bytes(bytestring=request.full_path,
+                                            encoding=request.encoding)
     app.service_global_variables.data.time_series_work = TimeSeriesDF(result)
     return {"columns": app.service_global_variables.data.time_series_work.df_work.columns.tolist(),
             "values": result.values.tolist()}

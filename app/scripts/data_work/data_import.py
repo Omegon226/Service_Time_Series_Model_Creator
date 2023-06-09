@@ -4,6 +4,7 @@ import pandas as pd
 
 import logging
 from time import perf_counter
+from io import BytesIO
 
 from app.scripts.http_error import http_error
 
@@ -22,6 +23,54 @@ logger.addHandler(console_handler)
 
 
 class Importer:
+    @staticmethod
+    def import_data_from_csv_bytes(bytestring: bytes, sep: str, decimal: str, encoding: str):
+        logger.info(f"Началась подгрузка данных из бинарной строки формата CSV")
+        try:
+            timer_start: float = perf_counter()
+            bytestring = BytesIO(bytestring)
+            df: pd.DataFrame = pd.read_csv(bytestring,
+                                           sep=sep,
+                                           decimal=decimal,
+                                           dtype=np.float64,
+                                           engine="python",
+                                           encoding=encoding)
+            timer_end: float = perf_counter()
+
+            logger.info(f"Скачка данных из бинарной строки формата CSV прошла успешно! " +
+                        f"Затраченное время: {timer_end - timer_start}")
+            logger.debug(f"Данные: {df}")
+
+            return df
+        except Exception as error:
+            error_message: str = "Ошибка при загрузке эталонных данных бинарной строки формата CSV"
+
+            http_error(error_message, error, logger=logger)
+
+    @staticmethod
+    def import_data_from_json_bytes(bytestring: bytes, sep: str, decimal: str, encoding: str):
+        logger.info(f"Началась подгрузка данных из бинарной строки формата JSON")
+        try:
+            timer_start: float = perf_counter()
+            bytestring = BytesIO(bytestring)
+            df: pd.DataFrame = pd.read_json(bytestring,
+                                            sep=sep,
+                                            decimal=decimal,
+                                            dtype=np.float64,
+                                            engine="python",
+                                            encoding=encoding)
+            timer_end: float = perf_counter()
+
+            logger.info(f"Скачка данных из бинарной строки формата JSON прошла успешно! " +
+                        f"Затраченное время: {timer_end - timer_start}")
+            logger.debug(f"Данные: {df}")
+
+            return df
+        except Exception as error:
+            error_message: str = "Ошибка при загрузке эталонных данных бинарной строки формата JSON"
+
+            http_error(error_message, error, logger=logger)
+
     @staticmethod
     def import_data_from_csv(full_path: str, sep: str, decimal: str, encoding: str):
         logger.info(f"Началась подгрузка данных из CSV файла: {full_path}")
