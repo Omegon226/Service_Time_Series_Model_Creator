@@ -2,13 +2,9 @@ import streamlit as st
 import requests
 
 st.markdown("""
-    # Hello, :a::b::o2::b::a:
+    # Hello, This is Frontend for Time Series Model Creator Service
     """)
 
+st.subheader("This layer implemented possibility for better communications users with service")
 
-x = requests.get("http://127.0.0.1:8000/data_manipulation/get_all_params_of_time_series/")
-a = x.text
-b = x.content
-c = x.json()
-
-st.text(x.json())
+st.write("© Смирнов И.М. ИГЭУ 2019-41хх")
