@@ -41,3 +41,7 @@
 2023-06-09 15:33:28,391|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 1.108898099977523
 2023-06-09 15:35:10,885|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
 2023-06-09 15:35:11,442|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 0.555077499942854
+2023-06-09 20:10:43,532|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 20:10:49,419|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.885499799973331
+2023-06-09 20:10:49,430|INFO|app.scripts.visualization.visualise_hist_of_data|Происходит создание визуализации всех временных рядов (hist)
+2023-06-09 20:10:55,079|INFO|app.scripts.visualization.visualise_hist_of_data|Создание визуализации (hist) прошло успешно!Затрачено времени: 5.649381899973378

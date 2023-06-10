@@ -49,3 +49,7 @@
 2023-06-09 15:35:17,537|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.5279390000505373
 2023-06-09 15:35:21,407|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
 2023-06-09 15:35:21,951|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.5431479999097064
+2023-06-09 20:11:06,100|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Пирсона
+2023-06-09 20:11:06,705|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6046165999723598
+2023-06-09 20:11:08,904|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Происходит создание визуализации всех временных рядов (corrheatmap), метод Спирмена
+2023-06-09 20:11:09,528|INFO|app.scripts.visualization.visualise_corrheatmap_of_data|Создание визуализации (corrheatmap) прошло успешно!Затрачено времени: 0.6240895999362692

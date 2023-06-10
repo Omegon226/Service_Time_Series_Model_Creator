@@ -44,3 +44,7 @@
 2023-06-09 15:35:25,647|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра ['a', 'b'] (rolling_statistics)
 2023-06-09 15:35:25,647|CRITICAL|app.scripts.visualization.visualize_rolling_statistics_of_data|Входе создании визуализации (rolling_statistics) для параметра/ов ['a', 'b'] произошла ошибка
 2023-06-09 15:35:25,648|ERROR|app.scripts.visualization.visualize_rolling_statistics_of_data|Для создания визуализации движущегося среднего (rolling_statistics) нужно знать главный параметр
+2023-06-09 20:11:11,809|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра ['PARAM_1', 'PARAM_2', 'PARAM_3', 'PARAM_4', 'PARAM_5'] (rolling_statistics)
+2023-06-09 20:11:12,914|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 1.1045355000533164
+2023-06-09 20:11:21,653|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Происходит создание визуализации статистики параметра ['PARAM_1'] (rolling_statistics)
+2023-06-09 20:11:22,456|INFO|app.scripts.visualization.visualize_rolling_statistics_of_data|Создание визуализации (rolling_statistics) прошло успешно!Затрачено времени: 0.8029486000305042

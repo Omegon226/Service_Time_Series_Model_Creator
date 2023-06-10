@@ -24,3 +24,5 @@
 2023-06-09 15:31:26,100|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.7468136999523267
 2023-06-09 15:35:14,863|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
 2023-06-09 15:35:15,293|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.42941460001748055
+2023-06-09 20:11:02,153|INFO|app.scripts.visualization.visualise_violinplot_of_data|Происходит создание визуализации всех временных рядов (violinplot)
+2023-06-09 20:11:02,650|INFO|app.scripts.visualization.visualise_violinplot_of_data|Создание визуализации (violinplot) прошло успешно!Затрачено времени: 0.49553559999912977

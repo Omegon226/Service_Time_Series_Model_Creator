@@ -12,3 +12,5 @@
 2023-06-09 11:58:23,084|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.3424563000444323
 2023-06-09 15:35:12,778|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
 2023-06-09 15:35:13,165|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.38269879994913936
+2023-06-09 20:10:59,181|INFO|app.scripts.visualization.visualise_boxplot_of_data|Происходит создание визуализации всех временных рядов (boxplot)
+2023-06-09 20:10:59,619|INFO|app.scripts.visualization.visualise_boxplot_of_data|Создание визуализации (boxplot) прошло успешно!Затрачено времени: 0.4367020999779925

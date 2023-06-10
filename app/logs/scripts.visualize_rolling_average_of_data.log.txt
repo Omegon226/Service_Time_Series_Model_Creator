@@ -50,3 +50,5 @@
 2023-06-09 13:43:35,849|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5892906000372022
 2023-06-09 13:43:43,485|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
 2023-06-09 13:43:44,013|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5270931998966262
+2023-06-09 20:11:30,027|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Происходит создание визуализации движущегося среднего (rolling_average) для основного параметра
+2023-06-09 20:11:30,610|INFO|app.scripts.visualization.visualize_rolling_average_of_data|Создание визуализации (rolling_average) прошло успешно!Затрачено времени: 0.5820265000220388
