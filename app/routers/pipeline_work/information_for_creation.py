@@ -16,7 +16,7 @@ async def get_all_scalers():
 
 @router_information_for_creation.get("/get_all_ml_model/")
 async def get_all_model():
-    result = InformationForCreation.get_all_ml_model()
+    result = InformationForCreation.get_all_ml_models()
     return {"ml_models": result}
 
 

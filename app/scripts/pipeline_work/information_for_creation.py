@@ -25,7 +25,7 @@ class InformationForCreation:
         return list(app.service_global_variables.pipelines.all_scalers.keys())
 
     @staticmethod
-    def get_all_ml_model():
+    def get_all_ml_models():
         return list(app.service_global_variables.pipelines.all_ml_models.keys())
 
     @staticmethod

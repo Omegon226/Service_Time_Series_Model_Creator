@@ -11,7 +11,7 @@ router_pipelines_creator_test = APIRouter(prefix="/test_pipelines_creator")
 
 
 @router_pipelines_creator.post("/create_pipelines/")
-async def test_create_pipelines(request: SetPipelineCreationData):
+async def create_pipelines(request: SetPipelineCreationData):
     PipelineCreator.create_pipelines(request, app.service_global_variables.data.time_series_work)
     return {"result": "Запрос был выполнен успешно!"}
 

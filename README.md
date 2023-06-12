@@ -14,5 +14,4 @@
 - Dill (pip install dill)
 - PyYAML (pip install pyyaml)
 - Python-Multipart (pip install python-multipart)
-- Streamlit (pip install streamlit)
 - Request (pip install requests)

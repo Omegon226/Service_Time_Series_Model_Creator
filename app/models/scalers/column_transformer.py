@@ -37,6 +37,7 @@ class ColumnTransformer:
         else:
             return list(set(self.sequence_of_columns) - set(list(time_series_df.columns.values)))
 
+    # Переименовать
     def sort_columns_in_needed_sequence(self, time_series_df: TimeSeriesDF | pd.DataFrame):
         if type(time_series_df) is TimeSeriesDF:
             return time_series_df.df_work[self.sequence_of_columns]
